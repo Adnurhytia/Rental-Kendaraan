@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data Pegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data Pegawai.Designer.cs">
+      <DependentUpon>Data Pegawai.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data Peminjam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Data Pegawai.resx">
+      <DependentUpon>Data Pegawai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data Peminjam.resx">
       <DependentUpon>Data Peminjam.cs</DependentUpon>
     </EmbeddedResource>

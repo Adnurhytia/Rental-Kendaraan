@@ -92,6 +92,7 @@
             this.dataPegawaiToolStripMenuItem.Name = "dataPegawaiToolStripMenuItem";
             this.dataPegawaiToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.dataPegawaiToolStripMenuItem.Text = "Data Pegawai";
+            this.dataPegawaiToolStripMenuItem.Click += new System.EventHandler(this.dataPegawaiToolStripMenuItem_Click);
             // 
             // dataRentalToolStripMenuItem
             // 

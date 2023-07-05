@@ -46,11 +46,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(167, 177);
+            this.label1.Location = new System.Drawing.Point(50, 200);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(483, 47);
+            this.label1.Size = new System.Drawing.Size(710, 47);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Toko Rental Semua Ada";
+            this.label1.Text = "Toko Rental Kendaraan Semua Ada";
             // 
             // toolStrip1
             // 
@@ -99,12 +99,14 @@
             this.dataRentalToolStripMenuItem.Name = "dataRentalToolStripMenuItem";
             this.dataRentalToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.dataRentalToolStripMenuItem.Text = "Data Rental";
+            this.dataRentalToolStripMenuItem.Click += new System.EventHandler(this.dataRentalToolStripMenuItem_Click);
             // 
             // dataKendaraanToolStripMenuItem
             // 
             this.dataKendaraanToolStripMenuItem.Name = "dataKendaraanToolStripMenuItem";
             this.dataKendaraanToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.dataKendaraanToolStripMenuItem.Text = "Data Kendaraan";
+            this.dataKendaraanToolStripMenuItem.Click += new System.EventHandler(this.dataKendaraanToolStripMenuItem_Click);
             // 
             // dataTransaksiToolStripMenuItem
             // 

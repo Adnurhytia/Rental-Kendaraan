@@ -30,5 +30,19 @@ namespace UAS_Kelompok21_PABD
             dpg.Show();
             this.Hide();
         }
+
+        private void dataRentalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Data_Rental dr = new Data_Rental(); 
+            dr.Show();
+            this.Hide();
+        }
+
+        private void dataKendaraanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Data_Kendaraan dk = new Data_Kendaraan();
+            dk.Show();
+            this.Hide();
+        }
     }
 }

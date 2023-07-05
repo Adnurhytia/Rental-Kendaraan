@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data Kendaraan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data Kendaraan.Designer.cs">
+      <DependentUpon>Data Kendaraan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data Pegawai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,12 @@
     <Compile Include="Data Peminjam.Designer.cs">
       <DependentUpon>Data Peminjam.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data Rental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data Rental.Designer.cs">
+      <DependentUpon>Data Rental.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,11 +78,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Data Kendaraan.resx">
+      <DependentUpon>Data Kendaraan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data Pegawai.resx">
       <DependentUpon>Data Pegawai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Data Peminjam.resx">
       <DependentUpon>Data Peminjam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data Rental.resx">
+      <DependentUpon>Data Rental.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

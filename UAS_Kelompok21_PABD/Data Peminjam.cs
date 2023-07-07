@@ -38,7 +38,7 @@ namespace UAS_Kelompok21_PABD
         private void dataGridView()
         {
             koneksi.Open();
-            string str = "select Id_Peminjam from dbo.Peminjam";
+            string str = "select * from dbo.Peminjam";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -109,6 +109,11 @@ namespace UAS_Kelompok21_PABD
             Form1 fu = new Form1();
             fu.Show();
             this.Hide();
+        }
+
+        private void tbxDelete_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

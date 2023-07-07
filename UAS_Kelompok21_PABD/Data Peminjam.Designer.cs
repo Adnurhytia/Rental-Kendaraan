@@ -149,11 +149,11 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Salmon;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(895, 65);
+            this.dataGridView1.Location = new System.Drawing.Point(901, 65);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(448, 334);
+            this.dataGridView1.Size = new System.Drawing.Size(897, 334);
             this.dataGridView1.TabIndex = 14;
             // 
             // btnDelete
@@ -192,6 +192,7 @@
             this.tbxDelete.Name = "tbxDelete";
             this.tbxDelete.Size = new System.Drawing.Size(101, 26);
             this.tbxDelete.TabIndex = 18;
+            this.tbxDelete.TextChanged += new System.EventHandler(this.tbxDelete_TextChanged);
             // 
             // btnSave
             // 
@@ -209,7 +210,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(1400, 467);
+            this.ClientSize = new System.Drawing.Size(1824, 467);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.tbxDelete);
             this.Controls.Add(this.btnUpdate);

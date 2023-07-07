@@ -113,18 +113,21 @@
             this.dataTransaksiToolStripMenuItem.Name = "dataTransaksiToolStripMenuItem";
             this.dataTransaksiToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.dataTransaksiToolStripMenuItem.Text = "Data Transaksi";
+            this.dataTransaksiToolStripMenuItem.Click += new System.EventHandler(this.dataTransaksiToolStripMenuItem_Click);
             // 
             // dataPeminjamanToolStripMenuItem
             // 
             this.dataPeminjamanToolStripMenuItem.Name = "dataPeminjamanToolStripMenuItem";
             this.dataPeminjamanToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.dataPeminjamanToolStripMenuItem.Text = "Data Peminjaman";
+            this.dataPeminjamanToolStripMenuItem.Click += new System.EventHandler(this.dataPeminjamanToolStripMenuItem_Click);
             // 
             // dataPersyaratanToolStripMenuItem
             // 
             this.dataPersyaratanToolStripMenuItem.Name = "dataPersyaratanToolStripMenuItem";
             this.dataPersyaratanToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.dataPersyaratanToolStripMenuItem.Text = "Data Persyaratan";
+            this.dataPersyaratanToolStripMenuItem.Click += new System.EventHandler(this.dataPersyaratanToolStripMenuItem_Click);
             // 
             // Form1
             // 

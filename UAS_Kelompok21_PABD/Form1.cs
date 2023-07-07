@@ -44,5 +44,26 @@ namespace UAS_Kelompok21_PABD
             dk.Show();
             this.Hide();
         }
+
+        private void dataTransaksiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Data_Transaksi dtr = new Data_Transaksi();
+            dtr.Show();
+            this.Hide();
+        }
+
+        private void dataPeminjamanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Data_Peminjaman dpn = new Data_Peminjaman();
+            dpn.Show();
+            this.Hide();
+        }
+
+        private void dataPersyaratanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Data_Persyaratan dpr = new Data_Persyaratan();
+            dpr.Show();
+            this.Hide();
+        }
     }
 }

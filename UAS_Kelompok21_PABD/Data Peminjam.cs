@@ -35,7 +35,13 @@ namespace UAS_Kelompok21_PABD
         }
         private void dataGridView()
         {
-            
+            koneksi.Open();
+            string str = "select Id_Peminjam from dbo.Peminjam";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
         }
         private void label2_Click(object sender, EventArgs e)
         {

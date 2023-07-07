@@ -16,5 +16,10 @@ namespace UAS_Kelompok21_PABD
         {
             InitializeComponent();
         }
+
+        private void Data_Persyaratan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

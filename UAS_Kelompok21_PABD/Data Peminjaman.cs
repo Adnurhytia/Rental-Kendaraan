@@ -16,5 +16,14 @@ namespace UAS_Kelompok21_PABD
         {
             InitializeComponent();
         }
+        private void refreshform()
+        {
+
+        }
+
+        private void Data_Peminjaman_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

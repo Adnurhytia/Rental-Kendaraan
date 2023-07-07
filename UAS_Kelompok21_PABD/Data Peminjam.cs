@@ -64,8 +64,34 @@ namespace UAS_Kelompok21_PABD
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            
-            
+            string idPeminjam = tbxBoxID.Text;
+            string nmPeminjam = tbxBoxNama.Text;
+            string jlPeminjam = tbxJalan.Text;
+            string ktPeminjam = tbxKota.Text;
+            string prPeminjam = tbxProvinsi.Text;
+
+            if (idPeminjam == "")
+            {
+                MessageBox.Show("Masukkan ID Peminjam", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                koneksi.Open();
+                string str = "insert into dbo.Peminjam (id_peminjam,nama_peminjam,jalan_peminjam,kota_peminjam,provinsi_peminjam)" + "values(@id_peminjam,@nama_peminjam,@jalan_peminjam,@kota_peminjam,@provinsi_peminjam)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("id_peminjam", idPeminjam));
+                cmd.Parameters.Add(new SqlParameter("nama_peminjam", nmPeminjam));
+                cmd.Parameters.Add(new SqlParameter("jalan_peminjam", jlPeminjam));
+                cmd.Parameters.Add(new SqlParameter("kota_peminjam", ktPeminjam));
+                cmd.Parameters.Add(new SqlParameter("provinsi_peminjam", prPeminjam));
+                cmd.ExecuteNonQuery();
+
+                koneksi.Close();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView();
+                refreshform();
+            }
         }
         private void Data_Peminjam_FormClosed(object sender, FormClosedEventArgs e)
         {

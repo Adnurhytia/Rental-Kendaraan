@@ -31,7 +31,9 @@ namespace UAS_Kelompok21_PABD
         }
         public Data_Peminjam()
         {
-            
+            InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            refreshform();
         }
         private void dataGridView()
         {

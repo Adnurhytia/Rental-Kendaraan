@@ -54,7 +54,9 @@ namespace UAS_Kelompok21_PABD
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
+            tbxBoxID.Enabled = true;
+            btnSave.Enabled=true;
+            btnDelete.Enabled=true;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

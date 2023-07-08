@@ -20,6 +20,8 @@ namespace UAS_Kelompok21_PABD
     {
         private string stringConnection = "Data Source=DESKTOP-4IT269M\\ADINDANURHAYATI;Initial Catalog=Peminjaman_Kendaraan;User ID=sa;Password=3007dinda";
         private SqlConnection koneksi;
+        private SqlCommand command;
+        private SqlDataAdapter adapter;
         public Data_Pegawai()
         {
             InitializeComponent();
@@ -137,6 +139,39 @@ namespace UAS_Kelompok21_PABD
         private void btnClear_Click(object sender, EventArgs e)
         {
             refreshform();
+        }
+
+        private void cbxIdRental_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void LoadRentalData()
+        {
+            try
+            {
+                koneksi.Open();
+
+                string query = "SELECT AdminID, Username FROM Admin";
+                command = new SqlCommand(query, koneksi);
+                DataTable adminTable = new DataTable();
+
+                adapter = new SqlDataAdapter(command);
+                adapter.Fill(adminTable);
+
+                cbxIdRental.DisplayMember = "Username";
+                cbxIdRental.ValueMember = "AdminID";
+
+                cbxIdRental.DataSource = adminTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                koneksi.Close();
+            }
         }
     }
 }

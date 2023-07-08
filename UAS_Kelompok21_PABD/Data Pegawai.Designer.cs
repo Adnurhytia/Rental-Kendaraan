@@ -39,6 +39,8 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.cbxIdRental = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,12 +156,33 @@
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // cbxIdRental
+            // 
+            this.cbxIdRental.FormattingEnabled = true;
+            this.cbxIdRental.Location = new System.Drawing.Point(807, 128);
+            this.cbxIdRental.Name = "cbxIdRental";
+            this.cbxIdRental.Size = new System.Drawing.Size(140, 28);
+            this.cbxIdRental.TabIndex = 14;
+            this.cbxIdRental.SelectedIndexChanged += new System.EventHandler(this.cbxIdRental_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(563, 128);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(119, 31);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "ID Rental";
+            // 
             // Data_Pegawai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1165, 445);
+            this.Controls.Add(this.cbxIdRental);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSave);
@@ -193,5 +216,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.ComboBox cbxIdRental;
+        private System.Windows.Forms.Label label4;
     }
 }

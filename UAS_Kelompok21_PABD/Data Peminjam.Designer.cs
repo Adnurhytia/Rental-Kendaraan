@@ -210,8 +210,8 @@
             // 
             // btnClear
             // 
-            this.btnClear.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnClear.Location = new System.Drawing.Point(645, 359);
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnClear.Location = new System.Drawing.Point(646, 356);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(100, 39);
             this.btnClear.TabIndex = 20;

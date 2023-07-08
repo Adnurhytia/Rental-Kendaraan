@@ -25,6 +25,9 @@ namespace UAS_Kelompok21_PABD
         {
             tbxBoxID.Text = "";
             tbxBoxNama.Text = "";
+            tbxJalan.Text = "";
+            tbxKota.Text = "";
+            tbxProvinsi.Text = "";
             tbxBoxID.Enabled = false;
             btnSave.Enabled = false;
             btnDelete.Enabled = false;
@@ -145,6 +148,44 @@ namespace UAS_Kelompok21_PABD
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string str = "UPDATE Peminjam SET id_peminjam = @id_peminjam,nama_peminjam = @nama_peminjam,jalan_peminjam = @jalan_peminjam,kota_peminjam = @kota_peminjam, provinsi_peminjam = @provinsi_peminjam WHERE id_peminjam = @id_peminjam";
+
+            using (SqlConnection conn = new SqlConnection(stringConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand(str, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id_peminjam", tbxBoxID.Text);
+                    cmd.Parameters.AddWithValue("@nama_peminjam", tbxBoxNama.Text);
+                    cmd.Parameters.AddWithValue("@jalan_peminjam", tbxJalan.Text);
+                    cmd.Parameters.AddWithValue("@kota_peminjam", tbxKota.Text);
+                    cmd.Parameters.AddWithValue("@provinsi_peminjam", tbxProvinsi.Text);
+
+                    try
+                    {
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        MessageBox.Show("Data Berhasil di Updated");
+                        dataGridView();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            refreshform();
         }
     }
 }

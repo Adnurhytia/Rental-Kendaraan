@@ -31,8 +31,8 @@ namespace UAS_Kelompok21_PABD
         {
             tbxNama.Text = "";
             tbxID.Text = "";
-            btnSave.Enabled = false;
-            btnUpdate.Enabled = false;
+            btnSave.Enabled = true;
+            btnUpdate.Enabled = true;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -70,6 +70,7 @@ namespace UAS_Kelompok21_PABD
         {
             tbxID.Enabled = true;
             btnSave.Enabled = true;
+            btnUpdate.Enabled = true;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

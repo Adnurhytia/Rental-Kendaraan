@@ -34,6 +34,7 @@ namespace UAS_Kelompok21_PABD
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
             refreshform();
+            dataGridView();
         }
         private void dataGridView()
         {
@@ -70,7 +71,32 @@ namespace UAS_Kelompok21_PABD
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            refreshform();
+            string str = "DELETE FROM Peminjam WHERE id_peminjam = @id_peminjam";
+
+            using (SqlConnection conn = new SqlConnection(stringConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand(str, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id_peminjam", tbxDelete.Text);
+
+                    try
+                    {
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        MessageBox.Show("Data Berhasil Dihapus");
+                        dataGridView();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message);
+                    }
+                }
+            }
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -112,6 +138,11 @@ namespace UAS_Kelompok21_PABD
         }
 
         private void tbxDelete_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

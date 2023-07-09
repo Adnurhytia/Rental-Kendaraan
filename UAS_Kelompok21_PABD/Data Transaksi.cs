@@ -226,5 +226,11 @@ namespace UAS_Kelompok21_PABD
         {
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Form1 myForm1 = new Form1();
+            myForm1.Show();
+        }
     }
 }

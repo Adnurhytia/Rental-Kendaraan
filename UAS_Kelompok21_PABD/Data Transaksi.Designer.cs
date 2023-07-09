@@ -48,6 +48,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.tbxDelete = new System.Windows.Forms.TextBox();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -238,12 +239,23 @@
             this.tbxDelete.Size = new System.Drawing.Size(125, 26);
             this.tbxDelete.TabIndex = 21;
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(14, 456);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(86, 28);
+            this.btnBack.TabIndex = 22;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // Data_Transaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1317, 492);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.tbxDelete);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnSave);
@@ -295,5 +307,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbxDelete;
+        private System.Windows.Forms.Button btnBack;
     }
 }

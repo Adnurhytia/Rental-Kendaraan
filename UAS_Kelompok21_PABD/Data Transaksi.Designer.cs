@@ -210,6 +210,7 @@
             this.cbxPlatNmr.Name = "cbxPlatNmr";
             this.cbxPlatNmr.Size = new System.Drawing.Size(156, 28);
             this.cbxPlatNmr.TabIndex = 18;
+            this.cbxPlatNmr.SelectedIndexChanged += new System.EventHandler(this.cbxPlatNmr_SelectedIndexChanged);
             // 
             // btnSave
             // 

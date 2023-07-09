@@ -29,6 +29,7 @@ namespace UAS_Kelompok21_PABD
             refreshform();
             dataGridView();
             LoadPeminjamData();
+            Plat_Nomor();
         }
 
         private void Data_Transaksi_Load(object sender, EventArgs e)
@@ -110,7 +111,7 @@ namespace UAS_Kelompok21_PABD
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.Transaksi (id_transaksi,total_harga,metode_pembayaran,denda,id_peminjam,plat_nmr)" + "values(@id_transaksi,@total_harga,@metode_pembayaran,@denda,@id_peminjam,plat_nmr)";
+                string str = "INSERT INTO Transaksi (id_transaksi,total_harga,metode_pembayaran,denda,id_peminjam,plat_nmr)" + "values(@id_transaksi,@total_harga,@metode_pembayaran,@denda,@id_peminjam,@plat_nmr)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("id_transaksi", idTransaksi));
@@ -192,6 +193,38 @@ namespace UAS_Kelompok21_PABD
             {
                 koneksi.Close();
             }
+        }
+        private void Plat_Nomor()
+        {
+            try
+            {
+                koneksi.Open();
+
+                string str = "SELECT plat_nmr FROM Kendaraan";
+                command = new SqlCommand(str, koneksi);
+                DataTable nomorTable = new DataTable();
+
+                adapter = new SqlDataAdapter(command);
+                adapter.Fill(nomorTable);
+
+                cbxPlatNmr.DisplayMember = "plat_nmr";
+                cbxPlatNmr.ValueMember = "plat_nmr";
+
+                cbxPlatNmr.DataSource = nomorTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                koneksi.Close();
+            }
+        }
+
+        private void cbxPlatNmr_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

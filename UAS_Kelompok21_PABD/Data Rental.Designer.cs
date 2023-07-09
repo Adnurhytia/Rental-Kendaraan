@@ -179,6 +179,7 @@
             this.tbxDelete.Name = "tbxDelete";
             this.tbxDelete.Size = new System.Drawing.Size(101, 26);
             this.tbxDelete.TabIndex = 20;
+            this.tbxDelete.TextChanged += new System.EventHandler(this.tbxDelete_TextChanged);
             // 
             // label4
             // 

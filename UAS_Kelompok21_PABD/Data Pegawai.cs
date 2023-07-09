@@ -28,6 +28,7 @@ namespace UAS_Kelompok21_PABD
             koneksi = new SqlConnection(stringConnection);
             refreshform();
             dataGridView();
+            LoadRentalData();
         }
         private void refreshform()
         {
@@ -114,6 +115,7 @@ namespace UAS_Kelompok21_PABD
         {
             string idPegawai = tbxID.Text;
             string nmPegawai = tbxNama.Text;
+            string idRental = cbxIdRental.Text;
 
             if (idPegawai == "")
             {
@@ -122,11 +124,12 @@ namespace UAS_Kelompok21_PABD
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.Pegawai(id_pegawai,nama_pegawai)" + "values(@id_pegawai,@nama_pegawai)";
+                string str = "insert into dbo.Pegawai(id_pegawai,nama_pegawai,id_rental)" + "values(@id_pegawai,@nama_pegawai,@id_rental)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("id_pegawai", idPegawai));
                 cmd.Parameters.Add(new SqlParameter("nama_pegawai", nmPegawai));
+                cmd.Parameters.Add(new SqlParameter("id_rental", idRental));
                 cmd.ExecuteNonQuery();
 
                 koneksi.Close();
@@ -143,7 +146,7 @@ namespace UAS_Kelompok21_PABD
 
         private void cbxIdRental_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void LoadRentalData()
@@ -152,17 +155,17 @@ namespace UAS_Kelompok21_PABD
             {
                 koneksi.Open();
 
-                string query = "SELECT AdminID, Username FROM Admin";
-                command = new SqlCommand(query, koneksi);
-                DataTable adminTable = new DataTable();
+                string str = "SELECT id_rental FROM Rental";
+                command = new SqlCommand(str, koneksi);
+                DataTable rentalTable = new DataTable();
 
                 adapter = new SqlDataAdapter(command);
-                adapter.Fill(adminTable);
+                adapter.Fill(rentalTable);
 
-                cbxIdRental.DisplayMember = "Username";
-                cbxIdRental.ValueMember = "AdminID";
+                cbxIdRental.DisplayMember = "id_rental";
+                cbxIdRental.ValueMember = "id_rental";
 
-                cbxIdRental.DataSource = adminTable;
+                cbxIdRental.DataSource = rentalTable;
             }
             catch (Exception ex)
             {
@@ -171,6 +174,35 @@ namespace UAS_Kelompok21_PABD
             finally
             {
                 koneksi.Close();
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string str = "DELETE FROM Pegawai WHERE id_pegawai = @id_pegawai";
+
+            using (SqlConnection conn = new SqlConnection(stringConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand(str, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id_pegawai", tbxDelete.Text);
+
+                    try
+                    {
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        MessageBox.Show("Data Berhasil Dihapus");
+                        dataGridView();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message);
+                    }
+                }
             }
         }
     }

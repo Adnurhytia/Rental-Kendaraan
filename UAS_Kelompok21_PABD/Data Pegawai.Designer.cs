@@ -41,6 +41,9 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.cbxIdRental = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbxDelete = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,12 +178,42 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "ID Rental";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.MistyRose;
+            this.btnDelete.Location = new System.Drawing.Point(1063, 289);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(85, 57);
+            this.btnDelete.TabIndex = 15;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(592, 361);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(149, 20);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "DeletebyIDPegawai";
+            // 
+            // tbxDelete
+            // 
+            this.tbxDelete.Location = new System.Drawing.Point(807, 361);
+            this.tbxDelete.Name = "tbxDelete";
+            this.tbxDelete.Size = new System.Drawing.Size(111, 26);
+            this.tbxDelete.TabIndex = 17;
+            // 
             // Data_Pegawai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1165, 445);
+            this.Controls.Add(this.tbxDelete);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.cbxIdRental);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnClear);
@@ -218,5 +251,8 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.ComboBox cbxIdRental;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tbxDelete;
     }
 }

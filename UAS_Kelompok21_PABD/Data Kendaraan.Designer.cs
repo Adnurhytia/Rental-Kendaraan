@@ -117,6 +117,10 @@
             // cbxJenis
             // 
             this.cbxJenis.FormattingEnabled = true;
+            this.cbxJenis.Items.AddRange(new object[] {
+            "Mobil",
+            "Motor",
+            "Bus"});
             this.cbxJenis.Location = new System.Drawing.Point(254, 196);
             this.cbxJenis.Name = "cbxJenis";
             this.cbxJenis.Size = new System.Drawing.Size(157, 28);
@@ -126,6 +130,10 @@
             // cbxHarga
             // 
             this.cbxHarga.FormattingEnabled = true;
+            this.cbxHarga.Items.AddRange(new object[] {
+            "50000",
+            "100000",
+            "200000"});
             this.cbxHarga.Location = new System.Drawing.Point(254, 235);
             this.cbxHarga.Name = "cbxHarga";
             this.cbxHarga.Size = new System.Drawing.Size(157, 28);

@@ -149,7 +149,7 @@ namespace UAS_Kelompok21_PABD
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.Kendaraan(id_rental,plat_nmr,jenis_kendaraan,harga_sewa,)" + "values(@id_rental,@plat_nmr,@jenis_kendaraan,@harga_sewa)";
+                string str = "insert into dbo.Kendaraan(id_rental,plat_nmr,jenis_kendaraan,harga_sewa)" + "values(@id_rental,@plat_nmr,@jenis_kendaraan,@harga_sewa)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("id_rental", idRental));

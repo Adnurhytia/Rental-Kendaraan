@@ -34,11 +34,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.labelRental = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.tbxIdPeminjam = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbxSearch = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.cbxIdPeminjam = new System.Windows.Forms.ComboBox();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,13 +100,6 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(279, 26);
             this.dateTimePicker1.TabIndex = 6;
             // 
-            // tbxIdPeminjam
-            // 
-            this.tbxIdPeminjam.Location = new System.Drawing.Point(645, 92);
-            this.tbxIdPeminjam.Name = "tbxIdPeminjam";
-            this.tbxIdPeminjam.Size = new System.Drawing.Size(120, 26);
-            this.tbxIdPeminjam.TabIndex = 7;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -130,6 +124,7 @@
             this.btnBack.TabIndex = 10;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnAdd
             // 
@@ -140,17 +135,35 @@
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
+            // cbxIdPeminjam
+            // 
+            this.cbxIdPeminjam.FormattingEnabled = true;
+            this.cbxIdPeminjam.Location = new System.Drawing.Point(647, 87);
+            this.cbxIdPeminjam.Name = "cbxIdPeminjam";
+            this.cbxIdPeminjam.Size = new System.Drawing.Size(120, 28);
+            this.cbxIdPeminjam.TabIndex = 12;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(728, 281);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(77, 32);
+            this.btnSave.TabIndex = 13;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
             // Data_Peminjaman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(936, 450);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.cbxIdPeminjam);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.tbxIdPeminjam);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.labelRental);
             this.Controls.Add(this.label3);
@@ -174,10 +187,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelRental;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox tbxIdPeminjam;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.ComboBox cbxIdPeminjam;
+        private System.Windows.Forms.Button btnSave;
     }
 }

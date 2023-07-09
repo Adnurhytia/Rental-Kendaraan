@@ -74,7 +74,7 @@ namespace UAS_Kelompok21_PABD
             {
                 using (SqlCommand cmd = new SqlCommand(str, conn))
                 {
-                    cmd.Parameters.AddWithValue("@id_peminjam", tbxDelete.Text);
+                    cmd.Parameters.AddWithValue("@id_transaksi", tbxDelete.Text);
 
                     try
                     {

@@ -38,6 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tbxSearch = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,12 +131,22 @@
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(645, 281);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(77, 32);
+            this.btnAdd.TabIndex = 11;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
             // Data_Peminjaman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(936, 450);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.label4);
@@ -167,5 +178,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnAdd;
     }
 }

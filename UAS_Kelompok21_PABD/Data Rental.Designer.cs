@@ -44,6 +44,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.tbxDelete = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(66, 36);
+            this.dataGridView1.Location = new System.Drawing.Point(67, 73);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -62,7 +63,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(171, 319);
+            this.label1.Location = new System.Drawing.Point(152, 356);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 31);
             this.label1.TabIndex = 1;
@@ -72,7 +73,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(171, 363);
+            this.label2.Location = new System.Drawing.Point(152, 400);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(162, 31);
             this.label2.TabIndex = 2;
@@ -82,7 +83,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(171, 409);
+            this.label3.Location = new System.Drawing.Point(152, 446);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 31);
             this.label3.TabIndex = 3;
@@ -90,35 +91,35 @@
             // 
             // tbxIDRental
             // 
-            this.tbxIDRental.Location = new System.Drawing.Point(378, 324);
+            this.tbxIDRental.Location = new System.Drawing.Point(359, 361);
             this.tbxIDRental.Name = "tbxIDRental";
             this.tbxIDRental.Size = new System.Drawing.Size(141, 26);
             this.tbxIDRental.TabIndex = 6;
             // 
             // tbxNamaRental
             // 
-            this.tbxNamaRental.Location = new System.Drawing.Point(379, 369);
+            this.tbxNamaRental.Location = new System.Drawing.Point(360, 406);
             this.tbxNamaRental.Name = "tbxNamaRental";
             this.tbxNamaRental.Size = new System.Drawing.Size(211, 26);
             this.tbxNamaRental.TabIndex = 7;
             // 
             // tbxJalanRental
             // 
-            this.tbxJalanRental.Location = new System.Drawing.Point(379, 409);
+            this.tbxJalanRental.Location = new System.Drawing.Point(360, 446);
             this.tbxJalanRental.Name = "tbxJalanRental";
             this.tbxJalanRental.Size = new System.Drawing.Size(127, 26);
             this.tbxJalanRental.TabIndex = 8;
             // 
             // tbxKotaRental
             // 
-            this.tbxKotaRental.Location = new System.Drawing.Point(512, 409);
+            this.tbxKotaRental.Location = new System.Drawing.Point(493, 446);
             this.tbxKotaRental.Name = "tbxKotaRental";
             this.tbxKotaRental.Size = new System.Drawing.Size(127, 26);
             this.tbxKotaRental.TabIndex = 9;
             // 
             // tbxProvinsiRental
             // 
-            this.tbxProvinsiRental.Location = new System.Drawing.Point(645, 409);
+            this.tbxProvinsiRental.Location = new System.Drawing.Point(626, 446);
             this.tbxProvinsiRental.Name = "tbxProvinsiRental";
             this.tbxProvinsiRental.Size = new System.Drawing.Size(127, 26);
             this.tbxProvinsiRental.TabIndex = 10;
@@ -175,7 +176,7 @@
             // 
             // tbxDelete
             // 
-            this.tbxDelete.Location = new System.Drawing.Point(697, 296);
+            this.tbxDelete.Location = new System.Drawing.Point(678, 333);
             this.tbxDelete.Name = "tbxDelete";
             this.tbxDelete.Size = new System.Drawing.Size(101, 26);
             this.tbxDelete.TabIndex = 20;
@@ -184,11 +185,21 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(602, 299);
+            this.label4.Location = new System.Drawing.Point(583, 336);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 20);
             this.label4.TabIndex = 19;
             this.label4.Text = "DeletebyID";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Rage Italic", 22F);
+            this.label5.Location = new System.Drawing.Point(323, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(225, 55);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Data Rental";
             // 
             // Data_Rental
             // 
@@ -196,6 +207,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(941, 499);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.tbxDelete);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnDelete);
@@ -239,5 +251,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TextBox tbxDelete;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

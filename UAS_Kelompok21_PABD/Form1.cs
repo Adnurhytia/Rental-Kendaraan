@@ -23,52 +23,50 @@ namespace UAS_Kelompok21_PABD
             InitializeComponent();
         }
 
-        private void dataPeminjamToolStripMenuItem_Click(object sender, EventArgs e)
+        private void buttonPeminjam_Click(object sender, EventArgs e)
         {
             Data_Peminjam dpe = new Data_Peminjam();
             dpe.Show();
             this.Hide();
         }
 
-        private void dataPegawaiToolStripMenuItem_Click(object sender, EventArgs e)
+        private void buttonPeminjaman_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonPegawai_Click(object sender, EventArgs e)
         {
             Data_Pegawai dpg = new Data_Pegawai();
             dpg.Show();
             this.Hide();
         }
 
-        private void dataRentalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Data_Rental dr = new Data_Rental(); 
-            dr.Show();
-            this.Hide();
-        }
-
-        private void dataKendaraanToolStripMenuItem_Click(object sender, EventArgs e)
+        private void buttonKendaraan_Click(object sender, EventArgs e)
         {
             Data_Kendaraan dk = new Data_Kendaraan();
             dk.Show();
             this.Hide();
         }
 
-        private void dataTransaksiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Data_Transaksi dtr = new Data_Transaksi();
-            dtr.Show();
-            this.Hide();
-        }
-
-        private void dataPeminjamanToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Data_Peminjaman dpn = new Data_Peminjaman();
-            dpn.Show();
-            this.Hide();
-        }
-
-        private void dataPersyaratanToolStripMenuItem_Click(object sender, EventArgs e)
+        private void buttonPersyaratan_Click(object sender, EventArgs e)
         {
             Data_Persyaratan dpr = new Data_Persyaratan();
             dpr.Show();
+            this.Hide();
+        }
+
+        private void buttonRental_Click(object sender, EventArgs e)
+        {
+            Data_Rental dr = new Data_Rental();
+            dr.Show();
+            this.Hide();
+        }
+
+        private void buttonTransaksi_Click(object sender, EventArgs e)
+        {
+            Data_Transaksi dtr = new Data_Transaksi();
+            dtr.Show();
             this.Hide();
         }
     }

@@ -28,118 +28,134 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.dataPeminjamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataPegawaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataRentalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataKendaraanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataTransaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataPeminjamanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataPersyaratanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip1.SuspendLayout();
+            this.buttonPeminjam = new System.Windows.Forms.Button();
+            this.buttonPeminjaman = new System.Windows.Forms.Button();
+            this.buttonKendaraan = new System.Windows.Forms.Button();
+            this.buttonPersyaratan = new System.Windows.Forms.Button();
+            this.buttonRental = new System.Windows.Forms.Button();
+            this.buttonTransaksi = new System.Windows.Forms.Button();
+            this.buttonPegawai = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 200);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(12, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(710, 47);
+            this.label1.Size = new System.Drawing.Size(778, 51);
             this.label1.TabIndex = 0;
             this.label1.Text = "Toko Rental Kendaraan Semua Ada";
             // 
-            // toolStrip1
+            // buttonPeminjam
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 34);
-            this.toolStrip1.TabIndex = 1;
-            this.toolStrip1.Text = "toolStrip1";
+            this.buttonPeminjam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonPeminjam.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPeminjam.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonPeminjam.Location = new System.Drawing.Point(35, 105);
+            this.buttonPeminjam.Name = "buttonPeminjam";
+            this.buttonPeminjam.Size = new System.Drawing.Size(174, 100);
+            this.buttonPeminjam.TabIndex = 2;
+            this.buttonPeminjam.Text = "Data Peminjam";
+            this.buttonPeminjam.UseVisualStyleBackColor = false;
+            this.buttonPeminjam.Click += new System.EventHandler(this.buttonPeminjam_Click);
             // 
-            // toolStripDropDownButton1
+            // buttonPeminjaman
             // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dataPeminjamToolStripMenuItem,
-            this.dataPegawaiToolStripMenuItem,
-            this.dataRentalToolStripMenuItem,
-            this.dataKendaraanToolStripMenuItem,
-            this.dataTransaksiToolStripMenuItem,
-            this.dataPeminjamanToolStripMenuItem,
-            this.dataPersyaratanToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Thistle;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(75, 29);
-            this.toolStripDropDownButton1.Text = "Menu";
+            this.buttonPeminjaman.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonPeminjaman.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            this.buttonPeminjaman.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonPeminjaman.Location = new System.Drawing.Point(35, 211);
+            this.buttonPeminjaman.Name = "buttonPeminjaman";
+            this.buttonPeminjaman.Size = new System.Drawing.Size(174, 97);
+            this.buttonPeminjaman.TabIndex = 3;
+            this.buttonPeminjaman.Text = "Data Peminjaman";
+            this.buttonPeminjaman.UseVisualStyleBackColor = false;
+            this.buttonPeminjaman.Click += new System.EventHandler(this.buttonPeminjaman_Click);
             // 
-            // dataPeminjamToolStripMenuItem
+            // buttonKendaraan
             // 
-            this.dataPeminjamToolStripMenuItem.Name = "dataPeminjamToolStripMenuItem";
-            this.dataPeminjamToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.dataPeminjamToolStripMenuItem.Text = "Data Peminjam";
-            this.dataPeminjamToolStripMenuItem.Click += new System.EventHandler(this.dataPeminjamToolStripMenuItem_Click);
+            this.buttonKendaraan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonKendaraan.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            this.buttonKendaraan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonKendaraan.Location = new System.Drawing.Point(317, 208);
+            this.buttonKendaraan.Name = "buttonKendaraan";
+            this.buttonKendaraan.Size = new System.Drawing.Size(174, 97);
+            this.buttonKendaraan.TabIndex = 4;
+            this.buttonKendaraan.Text = "Data Kendaraan";
+            this.buttonKendaraan.UseVisualStyleBackColor = false;
+            this.buttonKendaraan.Click += new System.EventHandler(this.buttonKendaraan_Click);
             // 
-            // dataPegawaiToolStripMenuItem
+            // buttonPersyaratan
             // 
-            this.dataPegawaiToolStripMenuItem.Name = "dataPegawaiToolStripMenuItem";
-            this.dataPegawaiToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.dataPegawaiToolStripMenuItem.Text = "Data Pegawai";
-            this.dataPegawaiToolStripMenuItem.Click += new System.EventHandler(this.dataPegawaiToolStripMenuItem_Click);
+            this.buttonPersyaratan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonPersyaratan.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            this.buttonPersyaratan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonPersyaratan.Location = new System.Drawing.Point(578, 108);
+            this.buttonPersyaratan.Name = "buttonPersyaratan";
+            this.buttonPersyaratan.Size = new System.Drawing.Size(174, 94);
+            this.buttonPersyaratan.TabIndex = 5;
+            this.buttonPersyaratan.Text = "Data Persyaratan";
+            this.buttonPersyaratan.UseVisualStyleBackColor = false;
+            this.buttonPersyaratan.Click += new System.EventHandler(this.buttonPersyaratan_Click);
             // 
-            // dataRentalToolStripMenuItem
+            // buttonRental
             // 
-            this.dataRentalToolStripMenuItem.Name = "dataRentalToolStripMenuItem";
-            this.dataRentalToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.dataRentalToolStripMenuItem.Text = "Data Rental";
-            this.dataRentalToolStripMenuItem.Click += new System.EventHandler(this.dataRentalToolStripMenuItem_Click);
+            this.buttonRental.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonRental.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            this.buttonRental.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonRental.Location = new System.Drawing.Point(578, 211);
+            this.buttonRental.Name = "buttonRental";
+            this.buttonRental.Size = new System.Drawing.Size(174, 97);
+            this.buttonRental.TabIndex = 6;
+            this.buttonRental.Text = "Data Rental";
+            this.buttonRental.UseVisualStyleBackColor = false;
+            this.buttonRental.Click += new System.EventHandler(this.buttonRental_Click);
             // 
-            // dataKendaraanToolStripMenuItem
+            // buttonTransaksi
             // 
-            this.dataKendaraanToolStripMenuItem.Name = "dataKendaraanToolStripMenuItem";
-            this.dataKendaraanToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.dataKendaraanToolStripMenuItem.Text = "Data Kendaraan";
-            this.dataKendaraanToolStripMenuItem.Click += new System.EventHandler(this.dataKendaraanToolStripMenuItem_Click);
+            this.buttonTransaksi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonTransaksi.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            this.buttonTransaksi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonTransaksi.Location = new System.Drawing.Point(187, 333);
+            this.buttonTransaksi.Name = "buttonTransaksi";
+            this.buttonTransaksi.Size = new System.Drawing.Size(424, 94);
+            this.buttonTransaksi.TabIndex = 7;
+            this.buttonTransaksi.Text = "Data Transaksi";
+            this.buttonTransaksi.UseVisualStyleBackColor = false;
+            this.buttonTransaksi.Click += new System.EventHandler(this.buttonTransaksi_Click);
             // 
-            // dataTransaksiToolStripMenuItem
+            // buttonPegawai
             // 
-            this.dataTransaksiToolStripMenuItem.Name = "dataTransaksiToolStripMenuItem";
-            this.dataTransaksiToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.dataTransaksiToolStripMenuItem.Text = "Data Transaksi";
-            this.dataTransaksiToolStripMenuItem.Click += new System.EventHandler(this.dataTransaksiToolStripMenuItem_Click);
-            // 
-            // dataPeminjamanToolStripMenuItem
-            // 
-            this.dataPeminjamanToolStripMenuItem.Name = "dataPeminjamanToolStripMenuItem";
-            this.dataPeminjamanToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.dataPeminjamanToolStripMenuItem.Text = "Data Peminjaman";
-            this.dataPeminjamanToolStripMenuItem.Click += new System.EventHandler(this.dataPeminjamanToolStripMenuItem_Click);
-            // 
-            // dataPersyaratanToolStripMenuItem
-            // 
-            this.dataPersyaratanToolStripMenuItem.Name = "dataPersyaratanToolStripMenuItem";
-            this.dataPersyaratanToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.dataPersyaratanToolStripMenuItem.Text = "Data Persyaratan";
-            this.dataPersyaratanToolStripMenuItem.Click += new System.EventHandler(this.dataPersyaratanToolStripMenuItem_Click);
+            this.buttonPegawai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonPegawai.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            this.buttonPegawai.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonPegawai.Location = new System.Drawing.Point(317, 105);
+            this.buttonPegawai.Name = "buttonPegawai";
+            this.buttonPegawai.Size = new System.Drawing.Size(174, 97);
+            this.buttonPegawai.TabIndex = 8;
+            this.buttonPegawai.Text = "Data Pegawai";
+            this.buttonPegawai.UseVisualStyleBackColor = false;
+            this.buttonPegawai.Click += new System.EventHandler(this.buttonPegawai_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.buttonPegawai);
+            this.Controls.Add(this.buttonTransaksi);
+            this.Controls.Add(this.buttonRental);
+            this.Controls.Add(this.buttonPersyaratan);
+            this.Controls.Add(this.buttonKendaraan);
+            this.Controls.Add(this.buttonPeminjaman);
+            this.Controls.Add(this.buttonPeminjam);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,15 +164,13 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripMenuItem dataPeminjamToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataPegawaiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataRentalToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataKendaraanToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataTransaksiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataPeminjamanToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataPersyaratanToolStripMenuItem;
+        private System.Windows.Forms.Button buttonPeminjam;
+        private System.Windows.Forms.Button buttonPeminjaman;
+        private System.Windows.Forms.Button buttonKendaraan;
+        private System.Windows.Forms.Button buttonPersyaratan;
+        private System.Windows.Forms.Button buttonRental;
+        private System.Windows.Forms.Button buttonTransaksi;
+        private System.Windows.Forms.Button buttonPegawai;
     }
 }
 

@@ -35,6 +35,8 @@
             this.cbxJenis = new System.Windows.Forms.ComboBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +82,9 @@
             // cbxJenis
             // 
             this.cbxJenis.FormattingEnabled = true;
+            this.cbxJenis.Items.AddRange(new object[] {
+            "KTP",
+            "SIM"});
             this.cbxJenis.Location = new System.Drawing.Point(397, 358);
             this.cbxJenis.Name = "cbxJenis";
             this.cbxJenis.Size = new System.Drawing.Size(110, 28);
@@ -98,11 +103,29 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Rage Italic", 22F);
-            this.label5.Location = new System.Drawing.Point(222, 9);
+            this.label5.Location = new System.Drawing.Point(242, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(312, 55);
             this.label5.TabIndex = 15;
             this.label5.Text = "Data Persyaratan";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(397, 392);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(74, 30);
+            this.btnAdd.TabIndex = 16;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(493, 392);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(74, 30);
+            this.btnSave.TabIndex = 17;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
             // Data_Persyaratan
             // 
@@ -110,6 +133,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.cbxJenis);
@@ -135,5 +160,7 @@
         private System.Windows.Forms.ComboBox cbxJenis;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnSave;
     }
 }

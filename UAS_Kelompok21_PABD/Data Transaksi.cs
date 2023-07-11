@@ -27,8 +27,6 @@ namespace UAS_Kelompok21_PABD
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
             refreshform();
-            dataGridView();
-            LoadPeminjamData();
             Plat_Nomor();
         }
 
@@ -38,161 +36,85 @@ namespace UAS_Kelompok21_PABD
         }
         private void refreshform()
         {
-            tbxIdTransaksi.Text = "";
-            tbxTotalHarga.Text = "";
+            txbxCustomer.Text = "";
+            txbJalan.Text = "";
             cbxMetode.Text = "";
-            cbxIDPeminjam.Text = "";
+            cbxKendaraan.Text = "";
             txbDenda.Text = "";
-            cbxPlatNmr.Text = "";
-            tbxIdTransaksi.Enabled = false;
+            cbxPlatNomor.Text = "";
+            txbxCustomer.Enabled = false;
             btnSave.Enabled = false;
-            btnDelete.Enabled = false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            tbxIdTransaksi.Enabled = true;
+            txbxCustomer.Enabled = true;
             btnSave.Enabled = true;
-            btnDelete.Enabled = true;
-        }
-        private void dataGridView()
-        {
-            koneksi.Open();
-            string str = "select * from dbo.Transaksi";
-            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];
-            koneksi.Close();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            string str = "DELETE FROM Transaksi WHERE id_transaksi = @id_transaksi";
-
-            using (SqlConnection conn = new SqlConnection(stringConnection))
-            {
-                using (SqlCommand cmd = new SqlCommand(str, conn))
-                {
-                    cmd.Parameters.AddWithValue("@id_transaksi", tbxDelete.Text);
-
-                    try
-                    {
-                        conn.Open();
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        MessageBox.Show("Data Berhasil Dihapus");
-                        dataGridView();
-                    }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("An error occurred: " + ex.Message);
-                    }
-                }
-            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string idTransaksi = tbxIdTransaksi.Text;
-            string tHarga = tbxTotalHarga.Text;
+            string idTransaksi = txbxCustomer.Text;
+            string tHarga = txbTotal.Text;
             string mPembayaran = cbxMetode.Text;
-            string idPeminjam = cbxIDPeminjam.Text;
+            string idPeminjam = Guid.NewGuid().ToString().Substring(0, 5);
             string denda = txbDenda.Text;
-            string pltNmr = cbxPlatNmr.Text;
+            string pltNmr = cbxPlatNomor.Text;
+            string nama = txbxCustomer.Text;
+            string jalan = txbJalan.Text;
+            string kota = txbKota.Text;
+            string provinsi = txbProvinsi.Text;
+            string kendaraan = cbxKendaraan.Text;
 
-            if (idTransaksi == "")
+            if (idPeminjam == "")
             {
-                MessageBox.Show("Masukkan ID Transaksi", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan ID Peminjam", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 koneksi.Open();
-                string str = "INSERT INTO Transaksi (id_transaksi,total_harga,metode_pembayaran,denda,id_peminjam,plat_nmr)" + "values(@id_transaksi,@total_harga,@metode_pembayaran,@denda,@id_peminjam,@plat_nmr)";
+                string str = "insert into dbo.Peminjam (id_peminjam, nama_peminjam, jalan_peminjam, kota_peminjam, provinsi_peminjam)" +
+                             "values (@id_peminjam, @nama_peminjam, @jalan_peminjam, @kota_peminjam, @provinsi_peminjam)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("id_transaksi", idTransaksi));
-                cmd.Parameters.Add(new SqlParameter("total_harga", tHarga));
-                cmd.Parameters.Add(new SqlParameter("metode_pembayaran", mPembayaran));
                 cmd.Parameters.Add(new SqlParameter("id_peminjam", idPeminjam));
-                cmd.Parameters.Add(new SqlParameter("denda", denda));
-                cmd.Parameters.Add(new SqlParameter("plat_nmr", pltNmr));
+                cmd.Parameters.Add(new SqlParameter("nama_peminjam", nama));
+                cmd.Parameters.Add(new SqlParameter("jalan_peminjam", jalan));
+                cmd.Parameters.Add(new SqlParameter("kota_peminjam", kota));
+                cmd.Parameters.Add(new SqlParameter("provinsi_peminjam", provinsi));
                 cmd.ExecuteNonQuery();
+
+                string sti = "insert into dbo.Transaksi (id_transaksi, total_harga, metode_pembayaran, denda, id_peminjam, plat_nmr)" +
+                             "values (@id_transaksi, @total_harga, @metode_pembayaran, @denda, @id_peminjam, @plat_nmr)";
+                SqlCommand cm = new SqlCommand(sti, koneksi);
+                cm.CommandType = CommandType.Text;
+                cm.Parameters.Add(new SqlParameter("id_transaksi", idTransaksi));
+                cm.Parameters.Add(new SqlParameter("total_harga", tHarga));
+                cm.Parameters.Add(new SqlParameter("metode_pembayaran", mPembayaran));
+                cm.Parameters.Add(new SqlParameter("denda", denda)); // Use 'denda' instead of 'kota'
+                cm.Parameters.Add(new SqlParameter("id_peminjam", idPeminjam));
+                cm.Parameters.Add(new SqlParameter("plat_nmr", pltNmr));
+                cm.ExecuteNonQuery();
 
                 koneksi.Close();
                 MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dataGridView();
+
                 refreshform();
             }
+
+            data1.Text = nama;
+            data2.Text = jalan;
+            data3.Text = kendaraan;
+            data4.Text = pltNmr;
+            data5.Text = mPembayaran;
+            data6.Text = denda;
+            data7.Text = tHarga;
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            string str = "UPDATE Transaksi SET id_transaksi = @id_transaksi,total_harga=  @total_harga,metode_pembayaran= @metode_pembayaran,denda= @denda,id_peminjam= @id_peminjam,plat_nmr= @plat_nmr WHERE id_transaksi = @id_transaksi";
-
-            using (SqlConnection conn = new SqlConnection(stringConnection))
-            {
-                using (SqlCommand cmd = new SqlCommand(str, conn))
-                {
-                    cmd.Parameters.AddWithValue("@id_transaksi", tbxIdTransaksi.Text);
-                    cmd.Parameters.AddWithValue("@total_harga", tbxTotalHarga.Text);
-                    cmd.Parameters.AddWithValue("@metode_pembayaran", cbxMetode.Text);
-                    cmd.Parameters.AddWithValue("@denda", txbDenda.Text);
-                    cmd.Parameters.AddWithValue("@id_peminjam", cbxIDPeminjam.Text);
-                    cmd.Parameters.AddWithValue("@plat_nmr", cbxPlatNmr.Text);
-
-                    try
-                    {
-                        conn.Open();
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        MessageBox.Show("Data Berhasil di Updated");
-                        dataGridView();
-                    }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("An error occurred: " + ex.Message);
-                    }
-                }
-            }
-        }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             refreshform();
-        }
-        private void LoadPeminjamData()
-        {
-            try
-            {
-                koneksi.Open();
-
-                string str = "SELECT id_peminjam FROM Peminjam";
-                command = new SqlCommand(str, koneksi);
-                DataTable peminjamTable = new DataTable();
-
-                adapter = new SqlDataAdapter(command);
-                adapter.Fill(peminjamTable);
-
-                cbxIDPeminjam.DisplayMember = "id_peminjam";
-                cbxIDPeminjam.ValueMember = "id_peminjam";
-
-                cbxIDPeminjam.DataSource = peminjamTable;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                koneksi.Close();
-            }
         }
         private void Plat_Nomor()
         {
@@ -207,10 +129,10 @@ namespace UAS_Kelompok21_PABD
                 adapter = new SqlDataAdapter(command);
                 adapter.Fill(nomorTable);
 
-                cbxPlatNmr.DisplayMember = "plat_nmr";
-                cbxPlatNmr.ValueMember = "plat_nmr";
+                cbxPlatNomor.DisplayMember = "plat_nmr";
+                cbxPlatNomor.ValueMember = "plat_nmr";
 
-                cbxPlatNmr.DataSource = nomorTable;
+                cbxPlatNomor.DataSource = nomorTable;
             }
             catch (Exception ex)
             {
@@ -222,15 +144,50 @@ namespace UAS_Kelompok21_PABD
             }
         }
 
-        private void cbxPlatNmr_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             Form1 myForm1 = new Form1();
             myForm1.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxMetode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbDenda_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbxCustomer_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbxAlamat_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxKendaraan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxPlatNomor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

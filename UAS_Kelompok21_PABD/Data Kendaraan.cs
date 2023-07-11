@@ -28,7 +28,7 @@ namespace UAS_Kelompok21_PABD
             cbxIDRental.Text = "";
             tbxPlatNmr.Text = "";
             cbxJenis.Text = "";
-            cbxHarga.Text = "";
+            tbxHargaSewa.Text = "";
             btnSave.Enabled = true;
             btnUpdate.Enabled = true;
         }
@@ -80,7 +80,7 @@ namespace UAS_Kelompok21_PABD
                 {
                     cmd.Parameters.AddWithValue("@plat_nmr", tbxPlatNmr.Text);
                     cmd.Parameters.AddWithValue("@jenis_kendaraan", cbxJenis.Text);
-                    cmd.Parameters.AddWithValue("@harga_sewa", cbxHarga.Text);
+                    cmd.Parameters.AddWithValue("@harga_sewa", tbxHargaSewa.Text);
 
                     try
                     {
@@ -140,7 +140,7 @@ namespace UAS_Kelompok21_PABD
             string jnsKendaraan = cbxJenis.Text;
             string pltNomor = tbxPlatNmr.Text;
             string idRental = cbxIDRental.Text;
-            string hrgSewa = cbxHarga.Text;
+            string hrgSewa = tbxHargaSewa.Text;
 
             if (pltNomor == "")
             {

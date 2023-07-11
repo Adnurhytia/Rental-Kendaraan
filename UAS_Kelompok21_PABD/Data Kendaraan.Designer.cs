@@ -36,7 +36,6 @@
             this.tbxPlatNmr = new System.Windows.Forms.TextBox();
             this.cbxIDRental = new System.Windows.Forms.ComboBox();
             this.cbxJenis = new System.Windows.Forms.ComboBox();
-            this.cbxHarga = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -46,6 +45,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.tbxDelete = new System.Windows.Forms.TextBox();
+            this.tbxHargaSewa = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,18 +126,6 @@
             this.cbxJenis.Size = new System.Drawing.Size(157, 28);
             this.cbxJenis.TabIndex = 7;
             this.cbxJenis.SelectedIndexChanged += new System.EventHandler(this.cbxJenis_SelectedIndexChanged);
-            // 
-            // cbxHarga
-            // 
-            this.cbxHarga.FormattingEnabled = true;
-            this.cbxHarga.Items.AddRange(new object[] {
-            "50000",
-            "100000",
-            "200000"});
-            this.cbxHarga.Location = new System.Drawing.Point(254, 235);
-            this.cbxHarga.Name = "cbxHarga";
-            this.cbxHarga.Size = new System.Drawing.Size(157, 28);
-            this.cbxHarga.TabIndex = 8;
             // 
             // dataGridView1
             // 
@@ -226,12 +214,20 @@
             this.tbxDelete.Size = new System.Drawing.Size(116, 26);
             this.tbxDelete.TabIndex = 18;
             // 
+            // tbxHargaSewa
+            // 
+            this.tbxHargaSewa.Location = new System.Drawing.Point(254, 238);
+            this.tbxHargaSewa.Name = "tbxHargaSewa";
+            this.tbxHargaSewa.Size = new System.Drawing.Size(157, 26);
+            this.tbxHargaSewa.TabIndex = 19;
+            // 
             // Data_Kendaraan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1088, 450);
+            this.Controls.Add(this.tbxHargaSewa);
             this.Controls.Add(this.tbxDelete);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnClear);
@@ -241,7 +237,6 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.cbxHarga);
             this.Controls.Add(this.cbxJenis);
             this.Controls.Add(this.cbxIDRental);
             this.Controls.Add(this.tbxPlatNmr);
@@ -269,7 +264,6 @@
         private System.Windows.Forms.TextBox tbxPlatNmr;
         private System.Windows.Forms.ComboBox cbxIDRental;
         private System.Windows.Forms.ComboBox cbxJenis;
-        private System.Windows.Forms.ComboBox cbxHarga;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSave;
@@ -279,5 +273,6 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbxDelete;
+        private System.Windows.Forms.TextBox tbxHargaSewa;
     }
 }

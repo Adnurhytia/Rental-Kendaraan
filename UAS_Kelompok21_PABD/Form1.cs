@@ -30,11 +30,6 @@ namespace UAS_Kelompok21_PABD
             this.Hide();
         }
 
-        private void buttonPeminjaman_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonPegawai_Click(object sender, EventArgs e)
         {
             Data_Pegawai dpg = new Data_Pegawai();
@@ -46,13 +41,6 @@ namespace UAS_Kelompok21_PABD
         {
             Data_Kendaraan dk = new Data_Kendaraan();
             dk.Show();
-            this.Hide();
-        }
-
-        private void buttonPersyaratan_Click(object sender, EventArgs e)
-        {
-            Data_Persyaratan dpr = new Data_Persyaratan();
-            dpr.Show();
             this.Hide();
         }
 

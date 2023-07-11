@@ -64,18 +64,6 @@
     <Compile Include="Data Peminjam.Designer.cs">
       <DependentUpon>Data Peminjam.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data Peminjaman.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Data Peminjaman.Designer.cs">
-      <DependentUpon>Data Peminjaman.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Data Persyaratan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Data Persyaratan.Designer.cs">
-      <DependentUpon>Data Persyaratan.cs</DependentUpon>
-    </Compile>
     <Compile Include="Data Rental.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,12 +92,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Data Peminjam.resx">
       <DependentUpon>Data Peminjam.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Data Peminjaman.resx">
-      <DependentUpon>Data Peminjaman.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Data Persyaratan.resx">
-      <DependentUpon>Data Persyaratan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Data Rental.resx">
       <DependentUpon>Data Rental.cs</DependentUpon>

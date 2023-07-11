@@ -34,6 +34,7 @@
             this.buttonRental = new System.Windows.Forms.Button();
             this.buttonTransaksi = new System.Windows.Forms.Button();
             this.buttonPegawai = new System.Windows.Forms.Button();
+            this.btnHistory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -78,7 +79,7 @@
             this.buttonRental.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonRental.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.buttonRental.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonRental.Location = new System.Drawing.Point(587, 163);
+            this.buttonRental.Location = new System.Drawing.Point(582, 108);
             this.buttonRental.Name = "buttonRental";
             this.buttonRental.Size = new System.Drawing.Size(174, 97);
             this.buttonRental.TabIndex = 6;
@@ -112,12 +113,26 @@
             this.buttonPegawai.UseVisualStyleBackColor = false;
             this.buttonPegawai.Click += new System.EventHandler(this.buttonPegawai_Click);
             // 
+            // btnHistory
+            // 
+            this.btnHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnHistory.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            this.btnHistory.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnHistory.Location = new System.Drawing.Point(582, 211);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(174, 97);
+            this.btnHistory.TabIndex = 9;
+            this.btnHistory.Text = "History Transaksi";
+            this.btnHistory.UseVisualStyleBackColor = false;
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.buttonPegawai);
             this.Controls.Add(this.buttonTransaksi);
             this.Controls.Add(this.buttonRental);
@@ -139,6 +154,7 @@
         private System.Windows.Forms.Button buttonRental;
         private System.Windows.Forms.Button buttonTransaksi;
         private System.Windows.Forms.Button buttonPegawai;
+        private System.Windows.Forms.Button btnHistory;
     }
 }
 

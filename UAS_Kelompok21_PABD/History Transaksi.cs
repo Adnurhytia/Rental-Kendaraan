@@ -16,11 +16,11 @@ using System.Windows.Input;
 
 namespace UAS_Kelompok21_PABD
 {
-    public partial class Data_Peminjam : Form
+    public partial class History_Transaksi : Form
     {
         private string stringConnection = "Data Source=DESKTOP-4IT269M\\ADINDANURHAYATI;Initial Catalog=Peminjaman_Kendaraan;User ID=sa;Password=3007dinda";
         private SqlConnection koneksi;
-        public Data_Peminjam()
+        public History_Transaksi()
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
@@ -28,51 +28,29 @@ namespace UAS_Kelompok21_PABD
         }
         private void dataGridView()
         {
+
             koneksi.Open();
-            string str = "select * from dbo.Peminjam";
+            string str = "select * from dbo.Transaksi";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
             koneksi.Close();
         }
-        private void label2_Click(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void Data_Peminjam_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            Form1 myForm1 = new Form1();
-            myForm1.Show();
-            this.Hide();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
-        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        private void History_Transaksi_Load(object sender, EventArgs e)
         {
 
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string str = "SELECT * FROM Peminjam WHERE id_peminjam = @id_peminjam";
+            string str = "SELECT * FROM Transaksi WHERE id_transaksi = @id_transaksi";
 
             using (SqlConnection conn = new SqlConnection(stringConnection))
             {
                 using (SqlCommand cmd = new SqlCommand(str, conn))
                 {
-                    cmd.Parameters.AddWithValue("@id_peminjam", tbxID.Text);
+                    cmd.Parameters.AddWithValue("@id_transaksi", tbxID.Text);
 
                     try
                     {
@@ -92,6 +70,13 @@ namespace UAS_Kelompok21_PABD
                     }
                 }
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Form1 myForm1 = new Form1();
+            myForm1.Show();
+            this.Hide();
         }
     }
 }

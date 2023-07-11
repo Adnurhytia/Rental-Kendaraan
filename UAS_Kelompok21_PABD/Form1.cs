@@ -57,5 +57,12 @@ namespace UAS_Kelompok21_PABD
             dtr.Show();
             this.Hide();
         }
+
+        private void btnHistory_Click(object sender, EventArgs e)
+        {
+            History_Transaksi htr = new History_Transaksi();
+            htr.Show();
+            this.Hide();
+        }
     }
 }

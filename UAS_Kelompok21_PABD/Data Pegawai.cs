@@ -42,6 +42,7 @@ namespace UAS_Kelompok21_PABD
         {
             Form1 myForm1 = new Form1();
             myForm1.Show();
+            this.Hide();
         }
 
         private void Data_Pegawai_Load(object sender, EventArgs e)

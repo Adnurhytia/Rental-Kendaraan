@@ -89,6 +89,7 @@ namespace UAS_Kelompok21_PABD
         {
             Form1 myForm1 = new Form1();
             myForm1.Show();
+            this.Hide();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

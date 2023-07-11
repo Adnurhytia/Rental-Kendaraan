@@ -102,13 +102,15 @@ namespace UAS_Kelompok21_PABD
                 refreshform();
             }
 
-            data1.Text = nama;
-            data2.Text = jalan;
-            data3.Text = kendaraan;
-            data4.Text = pltNmr;
-            data5.Text = mPembayaran;
-            data6.Text = denda;
-            data7.Text = tHarga;
+            txtCustomer.Text = nama;
+            txtAlamat.Text = jalan;
+            txtKota.Text = kota;
+            txtProvinsi.Text = provinsi;
+            txtKendaraan.Text = kendaraan;
+            txtPlatNmr.Text = pltNmr;
+            txtMetodePembayaran.Text = mPembayaran;
+            txtDenda.Text = denda;
+            txtTotal.Text = tHarga;
         }
 
 
@@ -148,6 +150,7 @@ namespace UAS_Kelompok21_PABD
         {
             Form1 myForm1 = new Form1();
             myForm1.Show();
+            this.Hide();
         }
 
         private void label3_Click(object sender, EventArgs e)

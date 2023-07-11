@@ -27,7 +27,7 @@ namespace UAS_Kelompok21_PABD
         {
             cbxIDRental.Text = "";
             tbxPlatNmr.Text = "";
-            cbxJenis.Text = "";
+            tbxJenis.Text = "";
             tbxHargaSewa.Text = "";
             btnSave.Enabled = true;
             btnUpdate.Enabled = true;
@@ -60,6 +60,7 @@ namespace UAS_Kelompok21_PABD
         {
             Form1 myForm1 = new Form1();
             myForm1.Show();
+            this.Hide();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -79,7 +80,7 @@ namespace UAS_Kelompok21_PABD
                 using (SqlCommand cmd = new SqlCommand(str, conn))
                 {
                     cmd.Parameters.AddWithValue("@plat_nmr", tbxPlatNmr.Text);
-                    cmd.Parameters.AddWithValue("@jenis_kendaraan", cbxJenis.Text);
+                    cmd.Parameters.AddWithValue("@jenis_kendaraan", tbxJenis.Text);
                     cmd.Parameters.AddWithValue("@harga_sewa", tbxHargaSewa.Text);
 
                     try
@@ -137,7 +138,7 @@ namespace UAS_Kelompok21_PABD
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string jnsKendaraan = cbxJenis.Text;
+            string jnsKendaraan = tbxJenis.Text;
             string pltNomor = tbxPlatNmr.Text;
             string idRental = cbxIDRental.Text;
             string hrgSewa = tbxHargaSewa.Text;

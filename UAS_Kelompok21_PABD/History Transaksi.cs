@@ -44,13 +44,13 @@ namespace UAS_Kelompok21_PABD
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string str = "SELECT * FROM Transaksi WHERE id_transaksi = @Nama_Customer";
+            string str = "SELECT * FROM Transaksi WHERE id_transaksi = @id_transaksi";
 
             using (SqlConnection conn = new SqlConnection(stringConnection))
             {
                 using (SqlCommand cmd = new SqlCommand(str, conn))
                 {
-                    cmd.Parameters.AddWithValue("@Nama_Customer", tbxID.Text);
+                    cmd.Parameters.AddWithValue("@id_transaksi", tbxID.Text);
 
                     try
                     {

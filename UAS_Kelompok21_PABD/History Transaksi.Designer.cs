@@ -60,7 +60,7 @@
             // 
             // tbxID
             // 
-            this.tbxID.BackColor = System.Drawing.Color.Lavender;
+            this.tbxID.BackColor = System.Drawing.Color.Thistle;
             this.tbxID.Location = new System.Drawing.Point(897, 86);
             this.tbxID.Name = "tbxID";
             this.tbxID.Size = new System.Drawing.Size(90, 26);

@@ -131,7 +131,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1513, 542);
+            this.ClientSize = new System.Drawing.Size(1513, 397);
             this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.buttonPegawai);
             this.Controls.Add(this.buttonTransaksi);

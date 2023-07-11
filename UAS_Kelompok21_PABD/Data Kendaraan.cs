@@ -73,7 +73,7 @@ namespace UAS_Kelompok21_PABD
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string str = "UPDATE Kendaraan SET plat_nmr= @plat_nmr,jenis_kendaraan= @jenis_kendaraan,harga_sewa= @harga_sewa";
+            string str = "UPDATE Kendaraan SET plat_nmr= @plat_nmr,jenis_kendaraan= @jenis_kendaraan,harga_sewa= @harga_sewa WHERE id_rental = @id_rental";
 
             using (SqlConnection conn = new SqlConnection(stringConnection))
             {
@@ -82,6 +82,7 @@ namespace UAS_Kelompok21_PABD
                     cmd.Parameters.AddWithValue("@plat_nmr", tbxPlatNmr.Text);
                     cmd.Parameters.AddWithValue("@jenis_kendaraan", tbxJenis.Text);
                     cmd.Parameters.AddWithValue("@harga_sewa", tbxHargaSewa.Text);
+                    cmd.Parameters.AddWithValue("@id_rental", cbxIDRental.Text);
 
                     try
                     {

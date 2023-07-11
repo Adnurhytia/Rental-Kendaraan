@@ -106,7 +106,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(189, 394);
+            this.btnBack.Location = new System.Drawing.Point(117, 383);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(89, 31);
             this.btnBack.TabIndex = 6;
@@ -118,11 +118,11 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Thistle;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(230, 116);
+            this.dataGridView1.Location = new System.Drawing.Point(117, 116);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(460, 251);
+            this.dataGridView1.Size = new System.Drawing.Size(573, 251);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 

@@ -41,7 +41,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Rage Italic", 22F);
-            this.label7.Location = new System.Drawing.Point(506, 18);
+            this.label7.Location = new System.Drawing.Point(670, 9);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(278, 55);
             this.label7.TabIndex = 6;
@@ -49,7 +49,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(12, 407);
+            this.btnBack.Location = new System.Drawing.Point(182, 427);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(73, 31);
             this.btnBack.TabIndex = 13;
@@ -59,9 +59,9 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Salmon;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Thistle;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(51, 76);
+            this.dataGridView1.Location = new System.Drawing.Point(221, 96);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -72,7 +72,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(967, 137);
+            this.label1.Location = new System.Drawing.Point(1137, 157);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 20);
             this.label1.TabIndex = 16;
@@ -80,7 +80,7 @@
             // 
             // tbxID
             // 
-            this.tbxID.Location = new System.Drawing.Point(999, 131);
+            this.tbxID.Location = new System.Drawing.Point(1169, 151);
             this.tbxID.Name = "tbxID";
             this.tbxID.Size = new System.Drawing.Size(90, 26);
             this.tbxID.TabIndex = 17;
@@ -88,8 +88,8 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnSearch.Location = new System.Drawing.Point(971, 163);
+            this.btnSearch.BackColor = System.Drawing.Color.Lavender;
+            this.btnSearch.Location = new System.Drawing.Point(1141, 183);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(185, 48);
             this.btnSearch.TabIndex = 18;
@@ -101,8 +101,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(1218, 467);
+            this.BackColor = System.Drawing.Color.Lavender;
+            this.ClientSize = new System.Drawing.Size(1527, 536);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.tbxID);
             this.Controls.Add(this.label1);

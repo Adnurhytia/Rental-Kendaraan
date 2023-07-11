@@ -38,6 +38,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Thistle;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(79, 22);
             this.dataGridView1.Name = "dataGridView1";
@@ -48,7 +49,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnSearch.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnSearch.Location = new System.Drawing.Point(869, 118);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(185, 48);
@@ -59,6 +60,7 @@
             // 
             // tbxID
             // 
+            this.tbxID.BackColor = System.Drawing.Color.Lavender;
             this.tbxID.Location = new System.Drawing.Point(897, 86);
             this.tbxID.Name = "tbxID";
             this.tbxID.Size = new System.Drawing.Size(90, 26);
@@ -67,6 +69,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Lavender;
             this.label1.Location = new System.Drawing.Point(865, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 20);
@@ -87,6 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1066, 450);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSearch);

@@ -42,7 +42,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(26, 23);
+            this.label1.Location = new System.Drawing.Point(394, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(778, 51);
             this.label1.TabIndex = 0;
@@ -50,10 +50,10 @@
             // 
             // buttonPeminjam
             // 
-            this.buttonPeminjam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonPeminjam.BackColor = System.Drawing.Color.Thistle;
             this.buttonPeminjam.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPeminjam.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonPeminjam.Location = new System.Drawing.Point(35, 105);
+            this.buttonPeminjam.Location = new System.Drawing.Point(424, 111);
             this.buttonPeminjam.Name = "buttonPeminjam";
             this.buttonPeminjam.Size = new System.Drawing.Size(174, 100);
             this.buttonPeminjam.TabIndex = 2;
@@ -63,10 +63,10 @@
             // 
             // buttonKendaraan
             // 
-            this.buttonKendaraan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonKendaraan.BackColor = System.Drawing.Color.Thistle;
             this.buttonKendaraan.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.buttonKendaraan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonKendaraan.Location = new System.Drawing.Point(317, 211);
+            this.buttonKendaraan.Location = new System.Drawing.Point(706, 217);
             this.buttonKendaraan.Name = "buttonKendaraan";
             this.buttonKendaraan.Size = new System.Drawing.Size(174, 97);
             this.buttonKendaraan.TabIndex = 4;
@@ -76,10 +76,10 @@
             // 
             // buttonRental
             // 
-            this.buttonRental.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonRental.BackColor = System.Drawing.Color.Thistle;
             this.buttonRental.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.buttonRental.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonRental.Location = new System.Drawing.Point(582, 108);
+            this.buttonRental.Location = new System.Drawing.Point(971, 114);
             this.buttonRental.Name = "buttonRental";
             this.buttonRental.Size = new System.Drawing.Size(174, 97);
             this.buttonRental.TabIndex = 6;
@@ -89,10 +89,10 @@
             // 
             // buttonTransaksi
             // 
-            this.buttonTransaksi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonTransaksi.BackColor = System.Drawing.Color.Thistle;
             this.buttonTransaksi.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.buttonTransaksi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonTransaksi.Location = new System.Drawing.Point(35, 208);
+            this.buttonTransaksi.Location = new System.Drawing.Point(424, 214);
             this.buttonTransaksi.Name = "buttonTransaksi";
             this.buttonTransaksi.Size = new System.Drawing.Size(174, 93);
             this.buttonTransaksi.TabIndex = 7;
@@ -102,10 +102,10 @@
             // 
             // buttonPegawai
             // 
-            this.buttonPegawai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonPegawai.BackColor = System.Drawing.Color.Thistle;
             this.buttonPegawai.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.buttonPegawai.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonPegawai.Location = new System.Drawing.Point(317, 105);
+            this.buttonPegawai.Location = new System.Drawing.Point(706, 111);
             this.buttonPegawai.Name = "buttonPegawai";
             this.buttonPegawai.Size = new System.Drawing.Size(174, 97);
             this.buttonPegawai.TabIndex = 8;
@@ -115,10 +115,10 @@
             // 
             // btnHistory
             // 
-            this.btnHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnHistory.BackColor = System.Drawing.Color.Thistle;
             this.btnHistory.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.btnHistory.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnHistory.Location = new System.Drawing.Point(582, 211);
+            this.btnHistory.Location = new System.Drawing.Point(971, 217);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.Size = new System.Drawing.Size(174, 97);
             this.btnHistory.TabIndex = 9;
@@ -130,8 +130,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Pink;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Lavender;
+            this.ClientSize = new System.Drawing.Size(1513, 542);
             this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.buttonPegawai);
             this.Controls.Add(this.buttonTransaksi);

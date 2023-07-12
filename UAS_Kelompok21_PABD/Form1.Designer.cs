@@ -35,6 +35,7 @@
             this.buttonTransaksi = new System.Windows.Forms.Button();
             this.buttonPegawai = new System.Windows.Forms.Button();
             this.btnHistory = new System.Windows.Forms.Button();
+            this.btnPersyaratan = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -126,12 +127,26 @@
             this.btnHistory.UseVisualStyleBackColor = false;
             this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
+            // btnPersyaratan
+            // 
+            this.btnPersyaratan.BackColor = System.Drawing.Color.Thistle;
+            this.btnPersyaratan.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            this.btnPersyaratan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPersyaratan.Location = new System.Drawing.Point(233, 111);
+            this.btnPersyaratan.Name = "btnPersyaratan";
+            this.btnPersyaratan.Size = new System.Drawing.Size(174, 97);
+            this.btnPersyaratan.TabIndex = 10;
+            this.btnPersyaratan.Text = "Data Persyaratan";
+            this.btnPersyaratan.UseVisualStyleBackColor = false;
+            this.btnPersyaratan.Click += new System.EventHandler(this.btnPersyaratan_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1513, 397);
+            this.Controls.Add(this.btnPersyaratan);
             this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.buttonPegawai);
             this.Controls.Add(this.buttonTransaksi);
@@ -155,6 +170,7 @@
         private System.Windows.Forms.Button buttonTransaksi;
         private System.Windows.Forms.Button buttonPegawai;
         private System.Windows.Forms.Button btnHistory;
+        private System.Windows.Forms.Button btnPersyaratan;
     }
 }
 

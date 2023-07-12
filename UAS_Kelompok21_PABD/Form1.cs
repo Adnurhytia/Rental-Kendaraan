@@ -64,5 +64,12 @@ namespace UAS_Kelompok21_PABD
             htr.Show();
             this.Hide();
         }
+
+        private void btnPersyaratan_Click(object sender, EventArgs e)
+        {
+            Persyaratan prs = new Persyaratan();
+            prs.Show();
+            this.Hide();
+        }
     }
 }

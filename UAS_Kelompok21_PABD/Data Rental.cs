@@ -105,7 +105,7 @@ namespace UAS_Kelompok21_PABD
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-
+            refreshform();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

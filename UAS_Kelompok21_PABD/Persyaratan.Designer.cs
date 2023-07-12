@@ -93,7 +93,7 @@
             this.cbxJenis.FormattingEnabled = true;
             this.cbxJenis.Items.AddRange(new object[] {
             "KTP",
-            "Identitas Pribadi"});
+            "Identitas"});
             this.cbxJenis.Location = new System.Drawing.Point(667, 164);
             this.cbxJenis.Name = "cbxJenis";
             this.cbxJenis.Size = new System.Drawing.Size(89, 28);

@@ -54,7 +54,7 @@
             this.buttonPeminjam.BackColor = System.Drawing.Color.Thistle;
             this.buttonPeminjam.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPeminjam.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonPeminjam.Location = new System.Drawing.Point(424, 111);
+            this.buttonPeminjam.Location = new System.Drawing.Point(422, 96);
             this.buttonPeminjam.Name = "buttonPeminjam";
             this.buttonPeminjam.Size = new System.Drawing.Size(174, 100);
             this.buttonPeminjam.TabIndex = 2;
@@ -67,7 +67,7 @@
             this.buttonKendaraan.BackColor = System.Drawing.Color.Thistle;
             this.buttonKendaraan.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.buttonKendaraan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonKendaraan.Location = new System.Drawing.Point(706, 217);
+            this.buttonKendaraan.Location = new System.Drawing.Point(704, 202);
             this.buttonKendaraan.Name = "buttonKendaraan";
             this.buttonKendaraan.Size = new System.Drawing.Size(174, 97);
             this.buttonKendaraan.TabIndex = 4;
@@ -80,7 +80,7 @@
             this.buttonRental.BackColor = System.Drawing.Color.Thistle;
             this.buttonRental.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.buttonRental.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonRental.Location = new System.Drawing.Point(971, 114);
+            this.buttonRental.Location = new System.Drawing.Point(969, 99);
             this.buttonRental.Name = "buttonRental";
             this.buttonRental.Size = new System.Drawing.Size(174, 97);
             this.buttonRental.TabIndex = 6;
@@ -93,9 +93,9 @@
             this.buttonTransaksi.BackColor = System.Drawing.Color.Thistle;
             this.buttonTransaksi.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.buttonTransaksi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonTransaksi.Location = new System.Drawing.Point(424, 214);
+            this.buttonTransaksi.Location = new System.Drawing.Point(502, 347);
             this.buttonTransaksi.Name = "buttonTransaksi";
-            this.buttonTransaksi.Size = new System.Drawing.Size(174, 93);
+            this.buttonTransaksi.Size = new System.Drawing.Size(571, 93);
             this.buttonTransaksi.TabIndex = 7;
             this.buttonTransaksi.Text = "Data Transaksi";
             this.buttonTransaksi.UseVisualStyleBackColor = false;
@@ -106,7 +106,7 @@
             this.buttonPegawai.BackColor = System.Drawing.Color.Thistle;
             this.buttonPegawai.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.buttonPegawai.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonPegawai.Location = new System.Drawing.Point(706, 111);
+            this.buttonPegawai.Location = new System.Drawing.Point(704, 96);
             this.buttonPegawai.Name = "buttonPegawai";
             this.buttonPegawai.Size = new System.Drawing.Size(174, 97);
             this.buttonPegawai.TabIndex = 8;
@@ -119,7 +119,7 @@
             this.btnHistory.BackColor = System.Drawing.Color.Thistle;
             this.btnHistory.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.btnHistory.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnHistory.Location = new System.Drawing.Point(971, 217);
+            this.btnHistory.Location = new System.Drawing.Point(969, 202);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.Size = new System.Drawing.Size(174, 97);
             this.btnHistory.TabIndex = 9;
@@ -132,7 +132,7 @@
             this.btnPersyaratan.BackColor = System.Drawing.Color.Thistle;
             this.btnPersyaratan.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.btnPersyaratan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPersyaratan.Location = new System.Drawing.Point(233, 111);
+            this.btnPersyaratan.Location = new System.Drawing.Point(422, 216);
             this.btnPersyaratan.Name = "btnPersyaratan";
             this.btnPersyaratan.Size = new System.Drawing.Size(174, 97);
             this.btnPersyaratan.TabIndex = 10;
@@ -145,7 +145,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1513, 397);
+            this.ClientSize = new System.Drawing.Size(1513, 476);
             this.Controls.Add(this.btnPersyaratan);
             this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.buttonPegawai);

@@ -59,13 +59,13 @@ namespace UAS_Kelompok21_PABD
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string str = "SELECT * FROM Peminjam WHERE id_peminjam = @id_peminjam";
+            string str = "SELECT * FROM Peminjam WHERE nama_peminjam= @nama_peminjam";
 
             using (SqlConnection conn = new SqlConnection(stringConnection))
             {
                 using (SqlCommand cmd = new SqlCommand(str, conn))
                 {
-                    cmd.Parameters.AddWithValue("@id_peminjam", tbxID.Text);
+                    cmd.Parameters.AddWithValue("@nama_peminjam", tbxID.Text);
 
                     try
                     {

@@ -88,12 +88,6 @@
     <Compile Include="History Transaksi.Designer.cs">
       <DependentUpon>History Transaksi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pengembalian.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pengembalian.Designer.cs">
-      <DependentUpon>Pengembalian.cs</DependentUpon>
-    </Compile>
     <Compile Include="Persyaratan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,9 +116,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="History Transaksi.resx">
       <DependentUpon>History Transaksi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pengembalian.resx">
-      <DependentUpon>Pengembalian.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Persyaratan.resx">
       <DependentUpon>Persyaratan.cs</DependentUpon>

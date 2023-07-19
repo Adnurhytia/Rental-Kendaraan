@@ -63,14 +63,14 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(1137, 157);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 20);
+            this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 16;
-            this.label1.Text = "ID";
+            this.label1.Text = "Nama";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tbxID
             // 
-            this.tbxID.Location = new System.Drawing.Point(1169, 151);
+            this.tbxID.Location = new System.Drawing.Point(1194, 151);
             this.tbxID.Name = "tbxID";
             this.tbxID.Size = new System.Drawing.Size(90, 26);
             this.tbxID.TabIndex = 17;

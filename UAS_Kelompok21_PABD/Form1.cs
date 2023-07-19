@@ -25,51 +25,105 @@ namespace UAS_Kelompok21_PABD
 
         private void buttonPeminjam_Click(object sender, EventArgs e)
         {
-            Data_Peminjam dpe = new Data_Peminjam();
-            dpe.Show();
-            this.Hide();
+            Data_Peminjam peminjam = new Data_Peminjam();
+            peminjam.TopLevel = false;
+            peminjam.FormBorderStyle = FormBorderStyle.None;
+            peminjam.Dock = DockStyle.Fill;
+
+            panel1.Controls.Clear();
+
+            panel1.Controls.Add(peminjam);
+
+            peminjam.Show();
         }
 
         private void buttonPegawai_Click(object sender, EventArgs e)
         {
-            Data_Pegawai dpg = new Data_Pegawai();
-            dpg.Show();
-            this.Hide();
+            Data_Pegawai pegawai = new Data_Pegawai();
+            pegawai.TopLevel = false;
+            pegawai.FormBorderStyle = FormBorderStyle.None;
+            pegawai.Dock = DockStyle.Fill;
+
+            panel1.Controls.Clear();
+
+            panel1.Controls.Add(pegawai);
+
+            pegawai.Show();
         }
 
         private void buttonKendaraan_Click(object sender, EventArgs e)
         {
-            Data_Kendaraan dk = new Data_Kendaraan();
-            dk.Show();
-            this.Hide();
+            Data_Kendaraan kendaraan = new Data_Kendaraan();
+            kendaraan.TopLevel = false;
+            kendaraan.FormBorderStyle = FormBorderStyle.None;
+            kendaraan.Dock = DockStyle.Fill;
+
+            panel1.Controls.Clear();
+
+            panel1.Controls.Add(kendaraan);
+
+            kendaraan.Show();
         }
 
         private void buttonRental_Click(object sender, EventArgs e)
         {
-            Data_Rental dr = new Data_Rental();
-            dr.Show();
-            this.Hide();
+            Data_Rental rental = new Data_Rental();
+            rental.TopLevel = false;
+            rental.FormBorderStyle = FormBorderStyle.None;
+            rental.Dock = DockStyle.Fill;
+
+            panel1.Controls.Clear();
+
+            panel1.Controls.Add(rental);
+
+            rental.Show();
         }
 
         private void buttonTransaksi_Click(object sender, EventArgs e)
         {
-            Data_Transaksi dtr = new Data_Transaksi();
-            dtr.Show();
-            this.Hide();
+            Data_Transaksi transaksi = new Data_Transaksi();
+            transaksi.TopLevel = false;
+            transaksi.FormBorderStyle = FormBorderStyle.None;
+            transaksi.Dock = DockStyle.Fill;
+
+            panel1.Controls.Clear();
+
+            panel1.Controls.Add(transaksi);
+
+            transaksi.Show();
         }
 
         private void btnHistory_Click(object sender, EventArgs e)
         {
-            History_Transaksi htr = new History_Transaksi();
-            htr.Show();
-            this.Hide();
+            History_Transaksi history = new History_Transaksi();
+            history.TopLevel = false;
+            history.FormBorderStyle = FormBorderStyle.None;
+            history.Dock = DockStyle.Fill;
+
+            panel1.Controls.Clear();
+
+            panel1.Controls.Add(history);
+
+            history.Show();
         }
 
         private void btnPersyaratan_Click(object sender, EventArgs e)
         {
-            Persyaratan prs = new Persyaratan();
-            prs.Show();
-            this.Hide();
+            Persyaratan persyaratan = new Persyaratan();
+            persyaratan.TopLevel = false;
+            persyaratan.FormBorderStyle = FormBorderStyle.None;
+            persyaratan.Dock = DockStyle.Fill;
+
+            panel1.Controls.Clear();
+
+            panel1.Controls.Add(persyaratan);
+
+            persyaratan.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

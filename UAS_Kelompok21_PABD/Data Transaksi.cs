@@ -27,7 +27,9 @@ namespace UAS_Kelompok21_PABD
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
             refreshform();
-            Plat_Nomor();
+            Kendaraan();
+            Persyaratan();
+            cbxKendaraan.SelectedIndexChanged += cbxKendaraan_SelectedIndexChanged;
         }
 
         private void Data_Transaksi_Load(object sender, EventArgs e)
@@ -40,8 +42,6 @@ namespace UAS_Kelompok21_PABD
             txbJalan.Text = "";
             cbxMetode.Text = "";
             cbxKendaraan.Text = "";
-            txbDenda.Text = "";
-            cbxPlatNomor.Text = "";
             txbxCustomer.Enabled = false;
             btnSave.Enabled = false;
         }
@@ -50,21 +50,28 @@ namespace UAS_Kelompok21_PABD
         {
             txbxCustomer.Enabled = true;
             btnSave.Enabled = true;
+            txbx_platNomer.Enabled = false;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string idTransaksi = txbxCustomer.Text;
+            string idTransaksi = Guid.NewGuid().ToString().Substring(0, 5);
             string tHarga = txbTotal.Text;
             string mPembayaran = cbxMetode.Text;
             string idPeminjam = Guid.NewGuid().ToString().Substring(0, 5);
-            string denda = txbDenda.Text;
-            string pltNmr = cbxPlatNomor.Text;
             string nama = txbxCustomer.Text;
             string jalan = txbJalan.Text;
             string kota = txbKota.Text;
             string provinsi = txbProvinsi.Text;
             string kendaraan = cbxKendaraan.Text;
+            string pltnmr = txbx_platNomer.Text;
+
+            string persyaratan = string.Empty;
+            if (cbxPersyaratan.SelectedItem != null)
+            {
+                DataRowView selectedRow = (DataRowView)cbxPersyaratan.SelectedItem;
+                persyaratan = selectedRow["id_persyaratan"].ToString();
+            }
 
             if (idPeminjam == "")
             {
@@ -84,17 +91,23 @@ namespace UAS_Kelompok21_PABD
                 cmd.Parameters.Add(new SqlParameter("provinsi_peminjam", provinsi));
                 cmd.ExecuteNonQuery();
 
-                string sti = "insert into dbo.Transaksi (id_transaksi, total_harga, metode_pembayaran, denda, id_peminjam, plat_nmr)" +
-                             "values (@id_transaksi, @total_harga, @metode_pembayaran, @denda, @id_peminjam, @plat_nmr)";
+                string sti = "INSERT INTO dbo.Transaksi (id_transaksi, total_harga, metode_pembayaran, id_peminjam, plat_nmr, id_persyaratan)" +
+                             "VALUES (@id_transaksi, @total_harga, @metode_pembayaran, @id_peminjam, @plat_nmr, @id_persyaratan)";
                 SqlCommand cm = new SqlCommand(sti, koneksi);
                 cm.CommandType = CommandType.Text;
                 cm.Parameters.Add(new SqlParameter("id_transaksi", idTransaksi));
                 cm.Parameters.Add(new SqlParameter("total_harga", tHarga));
                 cm.Parameters.Add(new SqlParameter("metode_pembayaran", mPembayaran));
-                cm.Parameters.Add(new SqlParameter("denda", denda)); // Use 'denda' instead of 'kota'
                 cm.Parameters.Add(new SqlParameter("id_peminjam", idPeminjam));
-                cm.Parameters.Add(new SqlParameter("plat_nmr", pltNmr));
+                cm.Parameters.Add(new SqlParameter("plat_nmr", txbx_platNomer.Text));
+                cm.Parameters.Add(new SqlParameter("id_persyaratan", persyaratan)); // Use SelectedValue to get the selected value
                 cm.ExecuteNonQuery();
+
+                // Update the status of the selected vehicle to "dipinjam"
+                string updateStatusQuery = "UPDATE Kendaraan SET status = 'Dipinjam' WHERE plat_nmr = @plat_nmr";
+                SqlCommand updateStatusCommand = new SqlCommand(updateStatusQuery, koneksi);
+                updateStatusCommand.Parameters.Add(new SqlParameter("plat_nmr", txbx_platNomer.Text));
+                updateStatusCommand.ExecuteNonQuery();
 
                 koneksi.Close();
                 MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -102,39 +115,40 @@ namespace UAS_Kelompok21_PABD
                 refreshform();
             }
 
-            txtCustomer.Text = nama;
-            txtAlamat.Text = jalan;
-            txtKota.Text = kota;
-            txtProvinsi.Text = provinsi;
-            txtKendaraan.Text = kendaraan;
-            txtPlatNmr.Text = pltNmr;
-            txtMetodePembayaran.Text = mPembayaran;
-            txtDenda.Text = denda;
-            txtTotal.Text = tHarga;
+            lbl_customer.Text = nama;
+            lbl_jalan.Text = jalan;
+            lbl_plat.Text = kota;
+            lbl_provinsi.Text = provinsi;
+            lbl_kendaraan.Text = kendaraan;
+            lbl_plat.Text = pltnmr;
+            lbl_bayar.Text = mPembayaran;
+            lbl_total.Text = tHarga;
+            lbl_persyaratan.Text = persyaratan;
         }
+
 
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             refreshform();
         }
-        private void Plat_Nomor()
+        private void Persyaratan()
         {
             try
             {
                 koneksi.Open();
 
-                string str = "SELECT plat_nmr FROM Kendaraan";
+                string str = "SELECT jenis_persyaratan, id_persyaratan FROM Persyaratan";
                 command = new SqlCommand(str, koneksi);
                 DataTable nomorTable = new DataTable();
 
                 adapter = new SqlDataAdapter(command);
                 adapter.Fill(nomorTable);
 
-                cbxPlatNomor.DisplayMember = "plat_nmr";
-                cbxPlatNomor.ValueMember = "plat_nmr";
+                cbxPersyaratan.DisplayMember = "jenis_persyaratan";
+                cbxPersyaratan.ValueMember = "id_persyaratan"; // Set the ValueMember to the appropriate column name
 
-                cbxPlatNomor.DataSource = nomorTable;
+                cbxPersyaratan.DataSource = nomorTable;
             }
             catch (Exception ex)
             {
@@ -146,12 +160,34 @@ namespace UAS_Kelompok21_PABD
             }
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void Kendaraan()
         {
-            Form1 myForm1 = new Form1();
-            myForm1.Show();
-            this.Hide();
+            try
+            {
+                koneksi.Open();
+
+                string str = "SELECT plat_nmr, jenis_kendaraan FROM Kendaraan WHERE status = 'tersedia'";
+                command = new SqlCommand(str, koneksi);
+                DataTable nomorTable = new DataTable();
+
+                adapter = new SqlDataAdapter(command);
+                adapter.Fill(nomorTable);
+
+                cbxKendaraan.DisplayMember = "jenis_kendaraan";
+                cbxKendaraan.ValueMember = "plat_nmr"; // Set the ValueMember to the appropriate column name
+
+                cbxKendaraan.DataSource = nomorTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                koneksi.Close();
+            }
         }
+
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -180,8 +216,14 @@ namespace UAS_Kelompok21_PABD
 
         private void cbxKendaraan_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (cbxKendaraan.SelectedItem != null)
+            {
+                DataRowView selectedRow = (DataRowView)cbxKendaraan.SelectedItem;
+                string platNmr = selectedRow["plat_nmr"].ToString();
+                txbx_platNomer.Text = platNmr;
+            }
         }
+
 
         private void cbxPlatNomor_SelectedIndexChanged(object sender, EventArgs e)
         {

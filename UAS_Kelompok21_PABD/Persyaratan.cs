@@ -27,7 +27,6 @@ namespace UAS_Kelompok21_PABD
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
             dataGridView();
-            LoadRentalData();
         }
 
         private void Persyaratan_Load(object sender, EventArgs e)
@@ -44,67 +43,45 @@ namespace UAS_Kelompok21_PABD
             dataGridView1.DataSource = ds.Tables[0];
             koneksi.Close();
         }
-        private void LoadRentalData()
+
+        private void btnSearch_Click(object sender, EventArgs e)
         {
-            try
+            string str = "SELECT * FROM Persyaratan WHERE id_persyaratan = @id_persyaratan";
+
+            using (SqlConnection conn = new SqlConnection(stringConnection))
             {
-                koneksi.Open();
+                using (SqlCommand cmd = new SqlCommand(str, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id_persyaratan", tbxID.Text);
 
-                string str = "SELECT id_peminjam FROM Peminjam";
-                command = new SqlCommand(str, koneksi);
-                DataTable rentalTable = new DataTable();
-
-                adapter = new SqlDataAdapter(command);
-                adapter.Fill(rentalTable);
-
-                cbxIdPeminjam.DisplayMember = "id_peminjam";
-                cbxIdPeminjam.ValueMember = "id_peminjam";
-
-                cbxIdPeminjam.DataSource = rentalTable;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                koneksi.Close();
+                    try
+                    {
+                        conn.Open();
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        dataGridView1.DataSource = dataTable;
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message);
+                    }
+                }
             }
         }
 
-
-        private void btnSave_Click(object sender, EventArgs e)
+        private void tbxID_TextChanged(object sender, EventArgs e)
         {
-            string idPersyaratan = tbxIDPersyaratan.Text;
-            string jenis = cbxJenis.Text;
-            string idPeminjam = cbxIdPeminjam.Text;
-
-            if (idPersyaratan == "")
-            {
-                MessageBox.Show("Masukkan ID Persyaratan", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                koneksi.Open();
-                string str = "insert into dbo.Persyaratan(id_persyaratan,jenis_persyaratan,id_peminjam)" + "values(@id_persyaratan,@jenis_persyaratan,@id_peminjam)";
-                SqlCommand cmd = new SqlCommand(str, koneksi);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("id_persyaratan", idPersyaratan));
-                cmd.Parameters.Add(new SqlParameter("jenis_persyaratan", jenis));
-                cmd.Parameters.Add(new SqlParameter("id_peminjam", idPeminjam));
-                cmd.ExecuteNonQuery();
-
-                koneksi.Close();
-                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dataGridView();
-            }
 
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            cbxIdPeminjam.Enabled = true;
-            btnSave.Enabled = true;
+
         }
     }
 }

@@ -36,16 +36,20 @@
             this.tbxPlatNmr = new System.Windows.Forms.TextBox();
             this.cbxIDRental = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.tbxDelete = new System.Windows.Forms.TextBox();
             this.tbxHargaSewa = new System.Windows.Forms.TextBox();
             this.tbxJenis = new System.Windows.Forms.TextBox();
+            this.cbxStatus = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btn_updateStatus = new System.Windows.Forms.Button();
+            this.txbx_search = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,16 +129,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(652, 216);
             this.dataGridView1.TabIndex = 9;
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(254, 281);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(76, 37);
-            this.btnAdd.TabIndex = 10;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(509, 325);
@@ -145,19 +139,9 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(12, 405);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(84, 33);
-            this.btnBack.TabIndex = 12;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(254, 324);
+            this.btnDelete.Location = new System.Drawing.Point(250, 374);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(76, 37);
             this.btnDelete.TabIndex = 14;
@@ -165,19 +149,9 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(349, 281);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(76, 37);
-            this.btnUpdate.TabIndex = 15;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(349, 324);
+            this.btnClear.Location = new System.Drawing.Point(345, 374);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(76, 37);
             this.btnClear.TabIndex = 16;
@@ -188,7 +162,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(122, 375);
+            this.label6.Location = new System.Drawing.Point(118, 425);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(95, 20);
             this.label6.TabIndex = 17;
@@ -196,7 +170,7 @@
             // 
             // tbxDelete
             // 
-            this.tbxDelete.Location = new System.Drawing.Point(254, 375);
+            this.tbxDelete.Location = new System.Drawing.Point(250, 425);
             this.tbxDelete.Name = "tbxDelete";
             this.tbxDelete.Size = new System.Drawing.Size(116, 26);
             this.tbxDelete.TabIndex = 18;
@@ -215,12 +189,86 @@
             this.tbxJenis.Size = new System.Drawing.Size(157, 26);
             this.tbxJenis.TabIndex = 20;
             // 
+            // cbxStatus
+            // 
+            this.cbxStatus.FormattingEnabled = true;
+            this.cbxStatus.Items.AddRange(new object[] {
+            "Dipinjam",
+            "Tersedia"});
+            this.cbxStatus.Location = new System.Drawing.Point(254, 287);
+            this.cbxStatus.Name = "cbxStatus";
+            this.cbxStatus.Size = new System.Drawing.Size(157, 28);
+            this.cbxStatus.TabIndex = 22;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(72, 287);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 31);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Status";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(250, 331);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(76, 37);
+            this.btnAdd.TabIndex = 10;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(345, 331);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(76, 37);
+            this.btnUpdate.TabIndex = 15;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btn_updateStatus
+            // 
+            this.btn_updateStatus.Location = new System.Drawing.Point(828, 374);
+            this.btn_updateStatus.Name = "btn_updateStatus";
+            this.btn_updateStatus.Size = new System.Drawing.Size(333, 37);
+            this.btn_updateStatus.TabIndex = 33;
+            this.btn_updateStatus.Text = "Search";
+            this.btn_updateStatus.UseVisualStyleBackColor = true;
+            this.btn_updateStatus.Click += new System.EventHandler(this.btn_updateStatus_Click);
+            // 
+            // txbx_search
+            // 
+            this.txbx_search.Location = new System.Drawing.Point(1004, 334);
+            this.txbx_search.Name = "txbx_search";
+            this.txbx_search.Size = new System.Drawing.Size(157, 26);
+            this.txbx_search.TabIndex = 32;
+            this.txbx_search.TextChanged += new System.EventHandler(this.txbx_search_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(822, 334);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 31);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "Search";
+            // 
             // Data_Kendaraan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1201, 450);
+            this.ClientSize = new System.Drawing.Size(1201, 492);
+            this.Controls.Add(this.btn_updateStatus);
+            this.Controls.Add(this.txbx_search);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cbxStatus);
             this.Controls.Add(this.tbxJenis);
             this.Controls.Add(this.tbxHargaSewa);
             this.Controls.Add(this.tbxDelete);
@@ -228,7 +276,6 @@
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dataGridView1);
@@ -258,15 +305,19 @@
         private System.Windows.Forms.TextBox tbxPlatNmr;
         private System.Windows.Forms.ComboBox cbxIDRental;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbxDelete;
         private System.Windows.Forms.TextBox tbxHargaSewa;
         private System.Windows.Forms.TextBox tbxJenis;
+        private System.Windows.Forms.ComboBox cbxStatus;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btn_updateStatus;
+        private System.Windows.Forms.TextBox txbx_search;
+        private System.Windows.Forms.Label label9;
     }
 }

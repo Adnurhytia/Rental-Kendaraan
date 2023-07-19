@@ -34,7 +34,6 @@
             this.tbxNama = new System.Windows.Forms.TextBox();
             this.tbxID = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -103,16 +102,6 @@
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(117, 383);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(89, 31);
-            this.btnBack.TabIndex = 6;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // dataGridView1
             // 
@@ -220,7 +209,6 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.tbxID);
             this.Controls.Add(this.tbxNama);
@@ -244,7 +232,6 @@
         private System.Windows.Forms.TextBox tbxNama;
         private System.Windows.Forms.TextBox tbxID;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnUpdate;

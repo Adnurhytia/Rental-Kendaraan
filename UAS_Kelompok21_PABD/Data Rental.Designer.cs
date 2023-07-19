@@ -39,7 +39,6 @@
             this.tbxProvinsiRental = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.tbxDelete = new System.Windows.Forms.TextBox();
@@ -144,16 +143,6 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(445, 462);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(79, 31);
-            this.btnBack.TabIndex = 15;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // btnClear
             // 
             this.btnClear.Location = new System.Drawing.Point(1256, 155);
@@ -212,7 +201,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.tbxProvinsiRental);
@@ -246,7 +234,6 @@
         private System.Windows.Forms.TextBox tbxProvinsiRental;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TextBox tbxDelete;

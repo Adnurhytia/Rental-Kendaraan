@@ -38,13 +38,6 @@ namespace UAS_Kelompok21_PABD
             btnUpdate.Enabled = true;
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            Form1 myForm1 = new Form1();
-            myForm1.Show();
-            this.Hide();
-        }
-
         private void Data_Pegawai_Load(object sender, EventArgs e)
         {
 

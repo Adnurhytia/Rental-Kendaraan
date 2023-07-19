@@ -32,7 +32,6 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.tbxID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,23 +75,12 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "ID";
             // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(12, 407);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(70, 31);
-            this.btnBack.TabIndex = 22;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // History_Transaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1066, 450);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.tbxID);
             this.Controls.Add(this.label1);
@@ -112,6 +100,5 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox tbxID;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnBack;
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label7 = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxID = new System.Windows.Forms.TextBox();
@@ -46,16 +45,6 @@
             this.label7.Size = new System.Drawing.Size(278, 55);
             this.label7.TabIndex = 6;
             this.label7.Text = "Data Peminjam";
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(182, 427);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(73, 31);
-            this.btnBack.TabIndex = 13;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // dataGridView1
             // 
@@ -77,6 +66,7 @@
             this.label1.Size = new System.Drawing.Size(26, 20);
             this.label1.TabIndex = 16;
             this.label1.Text = "ID";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tbxID
             // 
@@ -107,7 +97,6 @@
             this.Controls.Add(this.tbxID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label7);
             this.Name = "Data_Peminjam";
             this.Text = "Data_Peminjam";
@@ -120,7 +109,6 @@
 
         #endregion
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbxID;

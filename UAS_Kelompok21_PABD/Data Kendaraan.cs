@@ -56,13 +56,6 @@ namespace UAS_Kelompok21_PABD
 
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            Form1 myForm1 = new Form1();
-            myForm1.Show();
-            this.Hide();
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             cbxIDRental.Enabled = true;
@@ -73,7 +66,7 @@ namespace UAS_Kelompok21_PABD
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string str = "UPDATE Kendaraan SET plat_nmr= @plat_nmr,jenis_kendaraan= @jenis_kendaraan,harga_sewa= @harga_sewa WHERE id_rental = @id_rental";
+            string str = "UPDATE Kendaraan SET plat_nmr= @plat_nmr,jenis_kendaraan= @jenis_kendaraan,harga_sewa= @harga_sewa, status= @status WHERE id_rental = @id_rental";
 
             using (SqlConnection conn = new SqlConnection(stringConnection))
             {
@@ -83,6 +76,7 @@ namespace UAS_Kelompok21_PABD
                     cmd.Parameters.AddWithValue("@jenis_kendaraan", tbxJenis.Text);
                     cmd.Parameters.AddWithValue("@harga_sewa", tbxHargaSewa.Text);
                     cmd.Parameters.AddWithValue("@id_rental", cbxIDRental.Text);
+                    cmd.Parameters.AddWithValue("@status", cbxStatus.Text);
 
                     try
                     {
@@ -143,6 +137,7 @@ namespace UAS_Kelompok21_PABD
             string pltNomor = tbxPlatNmr.Text;
             string idRental = cbxIDRental.Text;
             string hrgSewa = tbxHargaSewa.Text;
+            string status = cbxStatus.Text;
 
             if (pltNomor == "")
             {
@@ -151,13 +146,14 @@ namespace UAS_Kelompok21_PABD
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.Kendaraan(id_rental,plat_nmr,jenis_kendaraan,harga_sewa)" + "values(@id_rental,@plat_nmr,@jenis_kendaraan,@harga_sewa)";
+                string str = "insert into dbo.Kendaraan(id_rental,plat_nmr,jenis_kendaraan,harga_sewa, status)" + "values(@id_rental,@plat_nmr,@jenis_kendaraan,@harga_sewa, @status)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("id_rental", idRental));
                 cmd.Parameters.Add(new SqlParameter("plat_nmr", pltNomor));
                 cmd.Parameters.Add(new SqlParameter("jenis_kendaraan", jnsKendaraan));
                 cmd.Parameters.Add(new SqlParameter("harga_sewa", hrgSewa));
+                cmd.Parameters.Add(new SqlParameter("status", status));
                 cmd.ExecuteNonQuery();
 
                 koneksi.Close();
@@ -197,6 +193,41 @@ namespace UAS_Kelompok21_PABD
         private void cbxJenis_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txbx_search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_updateStatus_Click(object sender, EventArgs e)
+        {
+            string str = "UPDATE * FROM Kendaraan WHERE jenis_kendaraan = @jenis_kendaraan";
+
+            using (SqlConnection conn = new SqlConnection(stringConnection))
+            {
+                using (SqlCommand cmd = new SqlCommand(str, conn))
+                {
+                    cmd.Parameters.AddWithValue("@jenis_kendaraan", txbx_search.Text);
+
+                    try
+                    {
+                        conn.Open();
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        dataGridView1.DataSource = dataTable;
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message);
+                    }
+                }
+            }
         }
     }
 }

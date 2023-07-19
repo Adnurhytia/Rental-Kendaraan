@@ -44,13 +44,13 @@ namespace UAS_Kelompok21_PABD
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string str = "SELECT * FROM Transaksi WHERE id_transaksi = @id_transaksi";
+            string str = "SELECT * FROM Transaksi WHERE id_transaksi = @nama_transaksi";
 
             using (SqlConnection conn = new SqlConnection(stringConnection))
             {
                 using (SqlCommand cmd = new SqlCommand(str, conn))
                 {
-                    cmd.Parameters.AddWithValue("@id_transaksi", tbxID.Text);
+                    cmd.Parameters.AddWithValue("@nama_transaksi", tbxID.Text);
 
                     try
                     {
@@ -70,13 +70,6 @@ namespace UAS_Kelompok21_PABD
                     }
                 }
             }
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            Form1 myForm1 = new Form1();
-            myForm1.Show();
-            this.Hide();
         }
     }
 }

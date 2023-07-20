@@ -46,27 +46,27 @@
             this.txbTotal = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txbx_platNomer = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.cbxPersyaratan = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txbx_platNomer = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.lbl_customer = new System.Windows.Forms.Label();
             this.lbl_jalan = new System.Windows.Forms.Label();
-            this.lbl_plat = new System.Windows.Forms.Label();
-            this.lbl_persyaratan = new System.Windows.Forms.Label();
-            this.lbl_bayar = new System.Windows.Forms.Label();
-            this.lbl_total = new System.Windows.Forms.Label();
             this.lbl_kota = new System.Windows.Forms.Label();
             this.lbl_provinsi = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.lbl_kendaraan = new System.Windows.Forms.Label();
+            this.lbl_platnmr = new System.Windows.Forms.Label();
+            this.lbl_persyaratan = new System.Windows.Forms.Label();
+            this.lbl_metode = new System.Windows.Forms.Label();
+            this.lbl_total = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -144,7 +144,7 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnAdd.Location = new System.Drawing.Point(553, 463);
+            this.btnAdd.Location = new System.Drawing.Point(526, 463);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(110, 40);
             this.btnAdd.TabIndex = 13;
@@ -155,7 +155,7 @@
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnClear.Location = new System.Drawing.Point(435, 463);
+            this.btnClear.Location = new System.Drawing.Point(408, 463);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(110, 43);
             this.btnClear.TabIndex = 15;
@@ -178,7 +178,7 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnSave.Location = new System.Drawing.Point(437, 511);
+            this.btnSave.Location = new System.Drawing.Point(410, 511);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(226, 43);
             this.btnSave.TabIndex = 19;
@@ -231,7 +231,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("MV Boli", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(1157, 19);
+            this.label16.Location = new System.Drawing.Point(1131, 31);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(102, 37);
             this.label16.TabIndex = 46;
@@ -256,27 +256,18 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.txbKota);
-            this.panel2.Location = new System.Drawing.Point(83, 75);
+            this.panel2.Location = new System.Drawing.Point(56, 75);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(810, 365);
             this.panel2.TabIndex = 47;
             // 
-            // txbx_platNomer
+            // cbxPersyaratan
             // 
-            this.txbx_platNomer.Location = new System.Drawing.Point(352, 156);
-            this.txbx_platNomer.Name = "txbx_platNomer";
-            this.txbx_platNomer.Size = new System.Drawing.Size(247, 26);
-            this.txbx_platNomer.TabIndex = 41;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(38, 155);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(145, 31);
-            this.label6.TabIndex = 42;
-            this.label6.Text = "Plat Nomor";
+            this.cbxPersyaratan.FormattingEnabled = true;
+            this.cbxPersyaratan.Location = new System.Drawing.Point(352, 197);
+            this.cbxPersyaratan.Name = "cbxPersyaratan";
+            this.cbxPersyaratan.Size = new System.Drawing.Size(252, 28);
+            this.cbxPersyaratan.TabIndex = 45;
             // 
             // label17
             // 
@@ -288,204 +279,212 @@
             this.label17.TabIndex = 43;
             this.label17.Text = "Persyaratan";
             // 
-            // cbxPersyaratan
+            // label6
             // 
-            this.cbxPersyaratan.FormattingEnabled = true;
-            this.cbxPersyaratan.Location = new System.Drawing.Point(352, 197);
-            this.cbxPersyaratan.Name = "cbxPersyaratan";
-            this.cbxPersyaratan.Size = new System.Drawing.Size(252, 28);
-            this.cbxPersyaratan.TabIndex = 45;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(38, 155);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(145, 31);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "Plat Nomor";
+            // 
+            // txbx_platNomer
+            // 
+            this.txbx_platNomer.Location = new System.Drawing.Point(352, 156);
+            this.txbx_platNomer.Name = "txbx_platNomer";
+            this.txbx_platNomer.Size = new System.Drawing.Size(247, 26);
+            this.txbx_platNomer.TabIndex = 41;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.Controls.Add(this.lbl_total);
+            this.panel1.Controls.Add(this.lbl_metode);
+            this.panel1.Controls.Add(this.lbl_persyaratan);
+            this.panel1.Controls.Add(this.lbl_platnmr);
             this.panel1.Controls.Add(this.lbl_kendaraan);
-            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.lbl_provinsi);
             this.panel1.Controls.Add(this.lbl_kota);
-            this.panel1.Controls.Add(this.lbl_total);
-            this.panel1.Controls.Add(this.lbl_bayar);
-            this.panel1.Controls.Add(this.lbl_persyaratan);
-            this.panel1.Controls.Add(this.lbl_plat);
             this.panel1.Controls.Add(this.lbl_jalan);
             this.panel1.Controls.Add(this.lbl_customer);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(1017, 75);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Location = new System.Drawing.Point(964, 75);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(479, 431);
+            this.panel1.Size = new System.Drawing.Size(410, 418);
             this.panel1.TabIndex = 48;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(14, 19);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(138, 31);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Customer :";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(14, 63);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(107, 31);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Alamat :";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(13, 244);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(158, 31);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Plat Nomor :";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(13, 291);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(161, 31);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Persyaratan :";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(13, 334);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(266, 31);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Metode Pembayaran :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 378);
+            this.label4.Location = new System.Drawing.Point(4, 8);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(160, 31);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "Total Harga :";
+            this.label4.Size = new System.Drawing.Size(138, 31);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Customer :";
             // 
-            // lbl_customer
+            // label7
             // 
-            this.lbl_customer.AutoSize = true;
-            this.lbl_customer.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_customer.Location = new System.Drawing.Point(158, 20);
-            this.lbl_customer.Name = "lbl_customer";
-            this.lbl_customer.Size = new System.Drawing.Size(132, 31);
-            this.lbl_customer.TabIndex = 41;
-            this.lbl_customer.Text = "Customer ";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(4, 57);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(107, 31);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Alamat :";
             // 
-            // lbl_jalan
+            // label9
             // 
-            this.lbl_jalan.AutoSize = true;
-            this.lbl_jalan.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_jalan.Location = new System.Drawing.Point(127, 65);
-            this.lbl_jalan.Name = "lbl_jalan";
-            this.lbl_jalan.Size = new System.Drawing.Size(94, 31);
-            this.lbl_jalan.TabIndex = 42;
-            this.lbl_jalan.Text = "Alamat";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(3, 189);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(149, 31);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Kendaraan :";
             // 
-            // lbl_plat
+            // label10
             // 
-            this.lbl_plat.AutoSize = true;
-            this.lbl_plat.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_plat.Location = new System.Drawing.Point(177, 244);
-            this.lbl_plat.Name = "lbl_plat";
-            this.lbl_plat.Size = new System.Drawing.Size(145, 31);
-            this.lbl_plat.TabIndex = 43;
-            this.lbl_plat.Text = "Plat Nomor";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(4, 237);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(165, 31);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Plat Nomor  :";
             // 
-            // lbl_persyaratan
+            // label11
             // 
-            this.lbl_persyaratan.AutoSize = true;
-            this.lbl_persyaratan.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_persyaratan.Location = new System.Drawing.Point(180, 291);
-            this.lbl_persyaratan.Name = "lbl_persyaratan";
-            this.lbl_persyaratan.Size = new System.Drawing.Size(148, 31);
-            this.lbl_persyaratan.TabIndex = 44;
-            this.lbl_persyaratan.Text = "Persyaratan";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(4, 283);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(168, 31);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Persyaratan  :";
             // 
-            // lbl_bayar
+            // label12
             // 
-            this.lbl_bayar.AutoSize = true;
-            this.lbl_bayar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_bayar.Location = new System.Drawing.Point(285, 331);
-            this.lbl_bayar.Name = "lbl_bayar";
-            this.lbl_bayar.Size = new System.Drawing.Size(104, 31);
-            this.lbl_bayar.TabIndex = 45;
-            this.lbl_bayar.Text = "Metode";
-            // 
-            // lbl_total
-            // 
-            this.lbl_total.AutoSize = true;
-            this.lbl_total.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total.Location = new System.Drawing.Point(177, 381);
-            this.lbl_total.Name = "lbl_total";
-            this.lbl_total.Size = new System.Drawing.Size(147, 31);
-            this.lbl_total.TabIndex = 46;
-            this.lbl_total.Text = "Total Harga";
-            // 
-            // lbl_kota
-            // 
-            this.lbl_kota.AutoSize = true;
-            this.lbl_kota.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_kota.Location = new System.Drawing.Point(127, 107);
-            this.lbl_kota.Name = "lbl_kota";
-            this.lbl_kota.Size = new System.Drawing.Size(94, 31);
-            this.lbl_kota.TabIndex = 47;
-            this.lbl_kota.Text = "Alamat";
-            // 
-            // lbl_provinsi
-            // 
-            this.lbl_provinsi.AutoSize = true;
-            this.lbl_provinsi.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_provinsi.Location = new System.Drawing.Point(127, 149);
-            this.lbl_provinsi.Name = "lbl_provinsi";
-            this.lbl_provinsi.Size = new System.Drawing.Size(94, 31);
-            this.lbl_provinsi.TabIndex = 48;
-            this.lbl_provinsi.Text = "Alamat";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(3, 326);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(266, 31);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Metode Pembayaran :";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(14, 197);
+            this.label13.Location = new System.Drawing.Point(3, 366);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(149, 31);
-            this.label13.TabIndex = 49;
-            this.label13.Text = "Kendaraan :";
+            this.label13.Size = new System.Drawing.Size(160, 31);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "Total Harga :";
+            // 
+            // lbl_customer
+            // 
+            this.lbl_customer.AutoSize = true;
+            this.lbl_customer.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_customer.Location = new System.Drawing.Point(144, 15);
+            this.lbl_customer.Name = "lbl_customer";
+            this.lbl_customer.Size = new System.Drawing.Size(117, 24);
+            this.lbl_customer.TabIndex = 9;
+            this.lbl_customer.Text = "txtCustomer";
+            // 
+            // lbl_jalan
+            // 
+            this.lbl_jalan.AutoSize = true;
+            this.lbl_jalan.Font = new System.Drawing.Font("Gadugi", 10F);
+            this.lbl_jalan.Location = new System.Drawing.Point(117, 63);
+            this.lbl_jalan.Name = "lbl_jalan";
+            this.lbl_jalan.Size = new System.Drawing.Size(76, 24);
+            this.lbl_jalan.TabIndex = 10;
+            this.lbl_jalan.Text = "txtJalan";
+            // 
+            // lbl_kota
+            // 
+            this.lbl_kota.AutoSize = true;
+            this.lbl_kota.Font = new System.Drawing.Font("Gadugi", 10F);
+            this.lbl_kota.Location = new System.Drawing.Point(117, 102);
+            this.lbl_kota.Name = "lbl_kota";
+            this.lbl_kota.Size = new System.Drawing.Size(74, 24);
+            this.lbl_kota.TabIndex = 11;
+            this.lbl_kota.Text = "txtKota";
+            // 
+            // lbl_provinsi
+            // 
+            this.lbl_provinsi.AutoSize = true;
+            this.lbl_provinsi.Font = new System.Drawing.Font("Gadugi", 10F);
+            this.lbl_provinsi.Location = new System.Drawing.Point(117, 140);
+            this.lbl_provinsi.Name = "lbl_provinsi";
+            this.lbl_provinsi.Size = new System.Drawing.Size(102, 24);
+            this.lbl_provinsi.TabIndex = 12;
+            this.lbl_provinsi.Text = "txtProvinsi";
             // 
             // lbl_kendaraan
             // 
             this.lbl_kendaraan.AutoSize = true;
-            this.lbl_kendaraan.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_kendaraan.Location = new System.Drawing.Point(177, 197);
+            this.lbl_kendaraan.Font = new System.Drawing.Font("Gadugi", 10F);
+            this.lbl_kendaraan.Location = new System.Drawing.Point(155, 194);
             this.lbl_kendaraan.Name = "lbl_kendaraan";
-            this.lbl_kendaraan.Size = new System.Drawing.Size(136, 31);
-            this.lbl_kendaraan.TabIndex = 50;
-            this.lbl_kendaraan.Text = "Kendaraan";
+            this.lbl_kendaraan.Size = new System.Drawing.Size(126, 24);
+            this.lbl_kendaraan.TabIndex = 13;
+            this.lbl_kendaraan.Text = "txtKendaraan";
+            // 
+            // lbl_platnmr
+            // 
+            this.lbl_platnmr.AutoSize = true;
+            this.lbl_platnmr.Font = new System.Drawing.Font("Gadugi", 10F);
+            this.lbl_platnmr.Location = new System.Drawing.Point(173, 242);
+            this.lbl_platnmr.Name = "lbl_platnmr";
+            this.lbl_platnmr.Size = new System.Drawing.Size(101, 24);
+            this.lbl_platnmr.TabIndex = 14;
+            this.lbl_platnmr.Text = "txtPlatnmr";
+            // 
+            // lbl_persyaratan
+            // 
+            this.lbl_persyaratan.AutoSize = true;
+            this.lbl_persyaratan.Font = new System.Drawing.Font("Gadugi", 10F);
+            this.lbl_persyaratan.Location = new System.Drawing.Point(178, 288);
+            this.lbl_persyaratan.Name = "lbl_persyaratan";
+            this.lbl_persyaratan.Size = new System.Drawing.Size(134, 24);
+            this.lbl_persyaratan.TabIndex = 15;
+            this.lbl_persyaratan.Text = "txtPersyaratan";
+            // 
+            // lbl_metode
+            // 
+            this.lbl_metode.AutoSize = true;
+            this.lbl_metode.Font = new System.Drawing.Font("Gadugi", 10F);
+            this.lbl_metode.Location = new System.Drawing.Point(275, 329);
+            this.lbl_metode.Name = "lbl_metode";
+            this.lbl_metode.Size = new System.Drawing.Size(102, 24);
+            this.lbl_metode.TabIndex = 16;
+            this.lbl_metode.Text = "txtMetode";
+            // 
+            // lbl_total
+            // 
+            this.lbl_total.AutoSize = true;
+            this.lbl_total.Font = new System.Drawing.Font("Gadugi", 10F);
+            this.lbl_total.Location = new System.Drawing.Point(168, 372);
+            this.lbl_total.Name = "lbl_total";
+            this.lbl_total.Size = new System.Drawing.Size(77, 24);
+            this.lbl_total.TabIndex = 17;
+            this.lbl_total.Text = "txtTotal";
             // 
             // Data_Transaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
-            this.ClientSize = new System.Drawing.Size(1731, 583);
+            this.ClientSize = new System.Drawing.Size(1450, 583);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label16);
@@ -529,21 +528,21 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox cbxPersyaratan;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_customer;
+        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lbl_total;
-        private System.Windows.Forms.Label lbl_bayar;
-        private System.Windows.Forms.Label lbl_persyaratan;
-        private System.Windows.Forms.Label lbl_plat;
         private System.Windows.Forms.Label lbl_jalan;
-        private System.Windows.Forms.Label lbl_customer;
+        private System.Windows.Forms.Label lbl_metode;
+        private System.Windows.Forms.Label lbl_persyaratan;
+        private System.Windows.Forms.Label lbl_platnmr;
+        private System.Windows.Forms.Label lbl_kendaraan;
         private System.Windows.Forms.Label lbl_provinsi;
         private System.Windows.Forms.Label lbl_kota;
-        private System.Windows.Forms.Label lbl_kendaraan;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lbl_total;
     }
 }

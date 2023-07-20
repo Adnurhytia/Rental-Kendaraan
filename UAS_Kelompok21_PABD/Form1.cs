@@ -125,5 +125,10 @@ namespace UAS_Kelompok21_PABD
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

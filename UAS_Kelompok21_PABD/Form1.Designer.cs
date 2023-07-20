@@ -43,7 +43,7 @@
             this.buttonPeminjam.BackColor = System.Drawing.Color.Thistle;
             this.buttonPeminjam.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPeminjam.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonPeminjam.Location = new System.Drawing.Point(967, 610);
+            this.buttonPeminjam.Location = new System.Drawing.Point(1155, 610);
             this.buttonPeminjam.Name = "buttonPeminjam";
             this.buttonPeminjam.Size = new System.Drawing.Size(155, 93);
             this.buttonPeminjam.TabIndex = 2;
@@ -108,7 +108,7 @@
             this.btnHistory.BackColor = System.Drawing.Color.Thistle;
             this.btnHistory.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.btnHistory.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnHistory.Location = new System.Drawing.Point(1141, 610);
+            this.btnHistory.Location = new System.Drawing.Point(1327, 610);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.Size = new System.Drawing.Size(174, 93);
             this.btnHistory.TabIndex = 9;
@@ -121,7 +121,7 @@
             this.btnPersyaratan.BackColor = System.Drawing.Color.Thistle;
             this.btnPersyaratan.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.btnPersyaratan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPersyaratan.Location = new System.Drawing.Point(1337, 610);
+            this.btnPersyaratan.Location = new System.Drawing.Point(962, 611);
             this.btnPersyaratan.Name = "btnPersyaratan";
             this.btnPersyaratan.Size = new System.Drawing.Size(174, 93);
             this.btnPersyaratan.TabIndex = 10;
@@ -145,16 +145,17 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1530, 716);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.buttonPeminjam);
             this.Controls.Add(this.btnPersyaratan);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.buttonPegawai);
             this.Controls.Add(this.buttonTransaksi);
             this.Controls.Add(this.buttonRental);
             this.Controls.Add(this.buttonKendaraan);
-            this.Controls.Add(this.buttonPeminjam);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }

@@ -97,34 +97,6 @@ namespace UAS_Kelompok21_PABD
             }
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            string str = "DELETE FROM Kendaraan WHERE plat_nmr = @plat_nmr";
-
-            using (SqlConnection conn = new SqlConnection(stringConnection))
-            {
-                using (SqlCommand cmd = new SqlCommand(str, conn))
-                {
-                    cmd.Parameters.AddWithValue("@plat_nmr", tbxDelete.Text);
-
-                    try
-                    {
-                        conn.Open();
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        MessageBox.Show("Data Berhasil Dihapus");
-                        dataGridView();
-                    }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show("An error occurred: " + ex.Message + " (Error Code: " + ex.Number + ")");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("An error occurred: " + ex.Message);
-                    }
-                }
-            }
-        }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
@@ -202,7 +174,7 @@ namespace UAS_Kelompok21_PABD
 
         private void btn_updateStatus_Click(object sender, EventArgs e)
         {
-            string str = "UPDATE * FROM Kendaraan WHERE jenis_kendaraan = @jenis_kendaraan";
+            string str = "SELECT * FROM Kendaraan WHERE jenis_kendaraan = @jenis_kendaraan";
 
             using (SqlConnection conn = new SqlConnection(stringConnection))
             {

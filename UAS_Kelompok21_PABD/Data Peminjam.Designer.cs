@@ -92,7 +92,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1527, 536);
+            this.ClientSize = new System.Drawing.Size(1351, 483);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.tbxID);
             this.Controls.Add(this.label1);

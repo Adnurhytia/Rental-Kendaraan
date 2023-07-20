@@ -100,10 +100,10 @@ namespace UAS_Kelompok21_PABD
                 cm.Parameters.Add(new SqlParameter("metode_pembayaran", mPembayaran));
                 cm.Parameters.Add(new SqlParameter("id_peminjam", idPeminjam));
                 cm.Parameters.Add(new SqlParameter("plat_nmr", txbx_platNomer.Text));
-                cm.Parameters.Add(new SqlParameter("id_persyaratan", persyaratan)); // Use SelectedValue to get the selected value
+                cm.Parameters.Add(new SqlParameter("id_persyaratan", persyaratan)); 
                 cm.ExecuteNonQuery();
 
-                // Update the status of the selected vehicle to "dipinjam"
+
                 string updateStatusQuery = "UPDATE Kendaraan SET status = 'Dipinjam' WHERE plat_nmr = @plat_nmr";
                 SqlCommand updateStatusCommand = new SqlCommand(updateStatusQuery, koneksi);
                 updateStatusCommand.Parameters.Add(new SqlParameter("plat_nmr", txbx_platNomer.Text));
@@ -117,11 +117,11 @@ namespace UAS_Kelompok21_PABD
 
             lbl_customer.Text = nama;
             lbl_jalan.Text = jalan;
-            lbl_plat.Text = kota;
+            lbl_kota.Text = kota;
             lbl_provinsi.Text = provinsi;
             lbl_kendaraan.Text = kendaraan;
-            lbl_plat.Text = pltnmr;
-            lbl_bayar.Text = mPembayaran;
+            lbl_platnmr.Text = pltnmr;
+            lbl_metode.Text = mPembayaran;
             lbl_total.Text = tHarga;
             lbl_persyaratan.Text = persyaratan;
         }

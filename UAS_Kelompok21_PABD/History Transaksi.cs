@@ -71,5 +71,10 @@ namespace UAS_Kelompok21_PABD
                 }
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

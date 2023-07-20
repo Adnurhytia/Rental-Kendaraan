@@ -27,6 +27,7 @@ namespace UAS_Kelompok21_PABD
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
             dataGridView();
+            LoadPeminjamData();
         }
 
         private void Persyaratan_Load(object sender, EventArgs e)
@@ -82,6 +83,60 @@ namespace UAS_Kelompok21_PABD
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+        private void LoadPeminjamData()
+        {
+            try
+            {
+                koneksi.Open();
+
+                string str = "SELECT id_peminjam FROM Peminjam";
+                command = new SqlCommand(str, koneksi);
+                DataTable peminjamTable = new DataTable();
+
+                adapter = new SqlDataAdapter(command);
+                adapter.Fill(peminjamTable);
+
+                cbxPeminjam.DisplayMember = "id_peminjam";
+                cbxPeminjam.ValueMember = "id_peminjam";
+
+                cbxPeminjam.DataSource = peminjamTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                koneksi.Close();
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string idPersyaratan = tbxIdPersyaratan.Text;
+            string jenis = cbxJenis.Text;
+            string idPeminjam = cbxPeminjam.Text;
+
+            if (idPersyaratan == "")
+            {
+                MessageBox.Show("Masukkan ID Persyaratan", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                koneksi.Open();
+                string str = "insert into dbo.Persyaratan(id_persyaratan,jenis_persyaratan,id_peminjam)" + "values(@id_persyaratan,@jenis_persyaratan,@id_peminjam)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("id_persyaratan", idPersyaratan));
+                cmd.Parameters.Add(new SqlParameter("jenis_persyaratan", jenis));
+                cmd.Parameters.Add(new SqlParameter("id_peminjam", idPeminjam));
+                cmd.ExecuteNonQuery();
+
+                koneksi.Close();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView();
+            }
         }
     }
 }

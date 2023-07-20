@@ -37,10 +37,7 @@
             this.cbxIDRental = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbxDelete = new System.Windows.Forms.TextBox();
             this.tbxHargaSewa = new System.Windows.Forms.TextBox();
             this.tbxJenis = new System.Windows.Forms.TextBox();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
@@ -131,49 +128,23 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(509, 325);
+            this.btnSave.Location = new System.Drawing.Point(345, 375);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(93, 36);
+            this.btnSave.Size = new System.Drawing.Size(76, 36);
             this.btnSave.TabIndex = 11;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(250, 374);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(76, 37);
-            this.btnDelete.TabIndex = 14;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(345, 374);
+            this.btnClear.Location = new System.Drawing.Point(250, 374);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(76, 37);
             this.btnClear.TabIndex = 16;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(118, 425);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 20);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "DeletedbyId";
-            // 
-            // tbxDelete
-            // 
-            this.tbxDelete.Location = new System.Drawing.Point(250, 425);
-            this.tbxDelete.Name = "tbxDelete";
-            this.tbxDelete.Size = new System.Drawing.Size(116, 26);
-            this.tbxDelete.TabIndex = 18;
             // 
             // tbxHargaSewa
             // 
@@ -271,11 +242,8 @@
             this.Controls.Add(this.cbxStatus);
             this.Controls.Add(this.tbxJenis);
             this.Controls.Add(this.tbxHargaSewa);
-            this.Controls.Add(this.tbxDelete);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dataGridView1);
@@ -306,10 +274,7 @@
         private System.Windows.Forms.ComboBox cbxIDRental;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox tbxDelete;
         private System.Windows.Forms.TextBox tbxHargaSewa;
         private System.Windows.Forms.TextBox tbxJenis;
         private System.Windows.Forms.ComboBox cbxStatus;
